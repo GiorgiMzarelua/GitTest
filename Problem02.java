@@ -7,6 +7,7 @@ public class Problem02 extends Karel{
 		while(frontIsClear()){
 			move();
 		}
+		move();
         while(beepersPresent()){
         	pickBeeper();
         }
