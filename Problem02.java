@@ -4,7 +4,7 @@ import stanford.karel.Karel;
 //ბრილიანტი უნდა გადაიტანოს 6x1 უჯრაზე.
 public class Problem02 extends Karel{
 	public void run(){
-		while(frontIsClear()){
+		while(noBeepersPresent()){
 			move();
 		}
         while(beepersPresent()){
