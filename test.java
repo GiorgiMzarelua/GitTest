@@ -2,28 +2,8 @@ import stanford.karel.Karel;
 public class test extends Karel{
     public void run(){
     	facingEast();
-    	int width=0;
-		int length=0;
-		while(frontIsClear()){
-			if(noBeepersPresent()){
-				putBeeper();
-			}
-			move();
-			width++;
-		}
-		turnLeft();
-		while(frontIsClear()){
-			if(noBeepersPresent()){
-				putBeeper();
-			}
-			move();
-			length++;
-		}
-		turnLeft();
-		move();
-		turnLeft();
-		for(int i=0;i<width;i++){
-			int a=length-1;
+		for(int i=0;i<5;i++){
+			int a=6;
 			if(i%2==0){
 				turnLeft();
 				move();

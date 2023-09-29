@@ -5,9 +5,10 @@ import stanford.karel.Karel;
 //ბრილიანტი დევს. ამასთან გაითვალისწინეთ, რომ სამყაროს ზომები თქვენთვის უცნობია და
 //თქვენი პროგრამა უნდა მუშაობდეს ნებისმიერი ზომის სამყაროსათვის.
 public class Problem07 extends Karel{
-	public void run(){
+    public void run(){
+    	facingEast();
+    	int width=0;
 		int length=0;
-		int width=0;
 		while(frontIsClear()){
 			if(noBeepersPresent()){
 				putBeeper();
@@ -23,9 +24,29 @@ public class Problem07 extends Karel{
 			move();
 			length++;
 		}
-        while(width>0){
-        	facingEast();
-        	
-        }
-	}
+		for(int i=0;i<width;i++){
+			int a=length-1;
+			if(i%2==0){
+				turnLeft();
+				move();
+				turnLeft();
+			}
+			if(i%2==1){
+				turnLeft();
+				turnLeft();
+				turnLeft();
+				move();
+				turnLeft();
+				turnLeft();
+				turnLeft();
+			}
+			while(a>0){
+				move();
+				if(noBeepersPresent()){
+					putBeeper();
+				}
+				a--;
+			}
+		}
+    }
 }
