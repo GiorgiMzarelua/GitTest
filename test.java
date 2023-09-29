@@ -3,7 +3,7 @@ public class test extends Karel{
     public void run(){
     	facingEast();
 		for(int i=0;i<5;i++){
-			int a=6;
+			int a=2;
 			if(i%2==0){
 				turnLeft();
 				move();
