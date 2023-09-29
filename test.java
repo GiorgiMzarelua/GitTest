@@ -19,14 +19,14 @@ public class test extends Karel{
 			move();
 			length++;
 		}
-		for(int i=1;i<=width;i++){
+		for(int i=0;i<width;i++){
 			int a=length-1;
-			if(i%2==1){
+			if(i%2==0){
 				turnLeft();
 				move();
 				turnLeft();
 			}
-			if(i%2==0){
+			if(i%2==1){
 				turnLeft();
 				turnLeft();
 				turnLeft();
