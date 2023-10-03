@@ -4,9 +4,21 @@ public class additionalproblem extends Karel{
     	for(int i=0;i<5;i++){
     		drawAhouse();
     	}
-      
+ //       drawTheSun();
         	
     }
+//	private void drawTheSun() {
+//		turnLeft();
+//		for(int i=0;i<13;i++){
+//			move();
+//		}
+//		putBeeper();
+//		while(frontIsClear()){
+//			move();
+//			putBeeper();
+//		}
+//		
+//	}
 	private void drawAdoor() {
 		move();
 		move();
