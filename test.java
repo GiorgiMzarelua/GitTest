@@ -19,5 +19,10 @@ public class test extends Karel{
 		turnLeft();
 		turnLeft();
 		turnLeft();
+		for(int i=0;i<2;i++)
+		{
+			move();
+			putBeeper();
+		}
     }
 }
