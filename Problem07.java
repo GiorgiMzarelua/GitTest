@@ -19,13 +19,13 @@ public class Problem07 extends Karel{
 		turnLeft();
 		while(frontIsClear()){
 			if(noBeepersPresent()){
-				putBeeper();
+				putBeeper(); 
 			}
 			move();
 			length++;
 		}
+		int a=length-1;
 		for(int i=0;i<width;i++){
-			int a=length-1;
 			if(i%2==0){
 				turnLeft();
 				move();
