@@ -4,7 +4,7 @@ public class test extends Karel{
     	move();
 		move();
 		turnLeft();
-		for(int j=0;j<9;j++){
+		for(int j=0;j<8;j++){
 			putBeeper();
 			move();
 		}
