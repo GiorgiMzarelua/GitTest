@@ -56,8 +56,17 @@ public class problem09 extends Karel{
  		    }
     	}
     	move();
-    	while(beepersPresent()){
-    		pickBeeper();
+    	if(beepersPresent()){
+    	    while(beepersPresent()){
+    		    pickBeeper();
+    	    }
+    	}
+    	else{
+    		turnLeft();
+    		move();
+    		while(beepersPresent()){
+    			pickBeeper();
+    		}
     	}
     }
 }
