@@ -29,5 +29,12 @@ public class Problem07 extends Karel{
     		turnLeft();
     		turnLeft();
     	}
+    	while(frontIsClear()){
+    		putBeeper();
+    		move();
+    	}
+    	if(noBeepersPresent()){
+    		putBeeper();
+    	}
     }
 }
