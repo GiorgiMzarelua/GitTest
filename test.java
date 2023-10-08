@@ -11,10 +11,10 @@ public class test extends SuperKarel{
 		turnAround();
 		while(frontIsClear()){
 			move();
-			turnRight();
-			turnAround();
-			turnLeft();
 		}
+		turnRight();
+		turnAround();
+		turnLeft();
 	}
 
 	private void findAmagazine() {
