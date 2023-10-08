@@ -1,9 +1,29 @@
-import stanford.karel.Karel;
-public class test extends Karel{
+import stanford.karel.SuperKarel;
+public class test extends SuperKarel{
     public void run(){
-    	for(int i=0;i<4;i++){
+    	findAmagazine();
+    	pickBeeper();
+    	backTostart();
+    }
+
+	private void backTostart() {
+		// TODO Auto-generated method stub
+		turnAround();
+		while(frontIsClear()){
+			move();
+			turnRight();
+			turnAround();
+			turnLeft();
+		}
+	}
+
+	private void findAmagazine() {
+		// TODO Auto-generated method stub
+		turnRight();
+		move();
+		turnLeft();
+		while(noBeepersPresent()){
 			move();
 		}
-    	
-    }
+	}
 }
