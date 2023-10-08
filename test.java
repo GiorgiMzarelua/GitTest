@@ -1,29 +1,38 @@
 import stanford.karel.SuperKarel;
 public class test extends SuperKarel{
     public void run(){
-    	findAmagazine();
-    	pickBeeper();
-    	backTostart();
+    	while(frontIsClear()){
+    		fixTheColumn();
+    		for(int i=0;i<4;i++){
+    			move();
+    		}
+    	}
     }
 
-	private void backTostart() {
-		// TODO Auto-generated method stub
+	private void fixTheColumn() {
+		moveUp();
+		moveDown();
+	}
+	private void moveDown() {
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
-		turnRight();
-		move();
-		turnRight();
+		turnLeft();
 	}
 
-	private void findAmagazine() {
-		// TODO Auto-generated method stub
-		turnRight();
-		move();
+	private void moveUp() {
 		turnLeft();
-		while(noBeepersPresent()){
+		while(frontIsClear()){
+			checkBeeper();
 			move();
+		}
+		checkBeeper();
+	}
+	
+	private void checkBeeper() {
+		if(noBeepersPresent()){
+			putBeeper();
 		}
 	}
 }
