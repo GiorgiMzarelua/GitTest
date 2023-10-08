@@ -13,8 +13,8 @@ public class test extends SuperKarel{
 			move();
 		}
 		turnRight();
-		turnAround();
-		turnLeft();
+		move();
+		turnRight();
 	}
 
 	private void findAmagazine() {
