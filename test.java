@@ -14,6 +14,8 @@ public class test extends SuperKarel{
 			turnLeft();
 			move();
 			turnRight();
+			move();
+			putBeeper();
 		}
 		if(leftIsClear() & noBeepersPresent()){
 			turnLeft();
