@@ -29,9 +29,8 @@ public class test extends SuperKarel{
 				move();
 				putBeeper();
 			}
-			turnBack();
 		}
-		
+		turnBack();
 	}
 
 	private void turnBack() {
