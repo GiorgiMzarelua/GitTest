@@ -6,6 +6,7 @@ public class test extends SuperKarel{
     		fillInLine();
     		ascend();
     	}
+    	fillInLine();
     }
 
 	private void ascend() {
