@@ -11,14 +11,14 @@ public class test extends SuperKarel{
 
 	private void ascend() {
 		if(leftIsClear() & beepersPresent()){
-			turnRight();
+			turnLeft();
 			move();
 			turnRight();
 			move();
 			putBeeper();
 		}
 		if(leftIsClear() & noBeepersPresent()){
-			turnRight();
+			turnLeft();
 			move();
 			turnRight();
 			putBeeper();
@@ -41,5 +41,6 @@ public class test extends SuperKarel{
 		while(frontIsClear()){
 			move();
 		}
+		turnAround();
 	}
 }
