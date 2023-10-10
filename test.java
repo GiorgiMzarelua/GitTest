@@ -6,8 +6,13 @@ public class test extends SuperKarel{
     		fillInLine();
     		ascend();
     	}
-    	fillInLine();
+    	fillInLastLine();
     }
+
+	private void fillInLastLine() {
+		
+		
+	}
 
 	private void ascend() {
 		if(leftIsClear() & beepersPresent()){
