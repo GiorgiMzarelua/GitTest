@@ -10,8 +10,13 @@ public class test extends SuperKarel{
     }
 
 	private void fillInLastLine() {
-		
-		
+		while(frontIsClear()){
+			move();
+			if(frontIsClear()){
+				move();
+				putBeeper();
+			}
+		}
 	}
 
 	private void ascend() {
