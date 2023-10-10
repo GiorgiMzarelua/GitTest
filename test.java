@@ -5,6 +5,15 @@ public class test extends SuperKarel{
         while(frontIsClear()){
         	moveUp();
         }
+        moveDown();
+        putBeeper();
+	}
+
+	private void moveDown() {
+		turnAround();
+		while(frontIsClear()){
+			move();
+		}
 	}
 
 	private void moveUp() {
