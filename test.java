@@ -1,56 +1,39 @@
-import stanford.karel.SuperKarel;
+ import stanford.karel.SuperKarel;
 public class test extends SuperKarel{
     public void run(){
-    	putBeeper();
-    	while(leftIsClear()){
-    		fillInLine();
-    		ascend();
+    	while(frontIsClear()){
+    		fixTheColumn();
+    		for(int i=0;i<4;i++){
+    			move();
+    		}
     	}
-    	fillInLastLine();
+    	fixTheColumn();
     }
 
-	private void fillInLastLine() {
-		while(frontIsClear()){
-			move();
-			if(frontIsClear()){
-				move();
-				putBeeper();
-			}
-		}
+	private void fixTheColumn() {
+		moveUp();
+		moveDown();
 	}
-
-	private void ascend() {
-		if(leftIsClear() & beepersPresent()){
-			turnLeft();
-			move();
-			turnRight();
-			move();
-			putBeeper();
-		}
-		if(leftIsClear() & noBeepersPresent()){
-			turnLeft();
-			move();
-			turnRight();
-			putBeeper();
-		}
-	}
-
-	private void fillInLine() {
-		while(frontIsClear()){
-			move();
-			if(frontIsClear()){
-				move();
-				putBeeper();
-			}
-		}
-		turnBack();
-	}
-
-	private void turnBack() {
+	private void moveDown() {
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
-		turnAround();
+		turnLeft();
+	}
+
+	private void moveUp() {
+		turnLeft();
+		while(frontIsClear()){
+			checkBeeper();
+			move();
+		}
+		checkBeeper();
+	}
+	
+	private void checkBeeper() {
+		if(noBeepersPresent()){
+			putBeeper();
+		}
 	}
 }
