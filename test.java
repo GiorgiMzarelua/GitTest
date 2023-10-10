@@ -9,6 +9,9 @@ public class test extends SuperKarel{
 
 	private void moveUp() {
 		move();
+		if(frontIsClear()){
+			move();
+		}
 		turnRight();
 		move();
 		turnLeft();
