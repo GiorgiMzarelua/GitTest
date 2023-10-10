@@ -1,28 +1,46 @@
 import stanford.karel.SuperKarel;
 public class test extends SuperKarel{
     public void run(){
-        turnLeft();
-        while(frontIsClear()){
-        	moveUp();
-        }
-        moveDown();
-        putBeeper();
+    	putBeeper();
+    	while(leftIsClear()){
+    		fillInLine();
+    		ascend();
+    	}
+    	fillInLine();
+    }
+
+	private void ascend() {
+		if(leftIsClear() & beepersPresent()){
+			turnLeft();
+			move();
+			turnRight();
+			move();
+			putBeeper();
+		}
+		if(leftIsClear() & noBeepersPresent()){
+			turnLeft();
+			move();
+			turnRight();
+			putBeeper();
+		}
 	}
 
-	private void moveDown() {
+	private void fillInLine() {
+		while(frontIsClear()){
+			move();
+			if(frontIsClear()){
+				move();
+				putBeeper();
+			}
+		}
+		turnBack();
+	}
+
+	private void turnBack() {
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
-	}
-
-	private void moveUp() {
-		move();
-		if(frontIsClear()){
-			move();
-		}
-		turnRight();
-		move();
-		turnLeft();
+		turnAround();
 	}
 }
