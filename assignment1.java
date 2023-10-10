@@ -7,6 +7,7 @@ public class assignment1 extends SuperKarel{
     }
 
 	private void backTostart() {
+		//after finding the magazine Karel returns to start
 		turnAround();
 		while(frontIsClear()){
 			move();
@@ -17,6 +18,7 @@ public class assignment1 extends SuperKarel{
 	}
 
 	private void findAmagazine() {
+		//this method finds the magazine 
 		turnRight();
 		move();
 		turnLeft();

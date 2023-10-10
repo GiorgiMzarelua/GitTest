@@ -11,10 +11,13 @@ public class assignment2 extends SuperKarel{
     }
 
 	private void fixTheColumn() {
+		//this method fixes columns. Karel ascends to top of the column while he fixes it 
+		// at the same time and then comes back
 		moveUp();
 		moveDown();
 	}
 	private void moveDown() {
+		//Karel descends to the first row after fixing the column
 		turnAround();
 		while(frontIsClear()){
 			move();
@@ -23,6 +26,7 @@ public class assignment2 extends SuperKarel{
 	}
 
 	private void moveUp() {
+		//Karel fixes the column 
 		turnLeft();
 		while(frontIsClear()){
 			checkBeeper();
@@ -32,6 +36,7 @@ public class assignment2 extends SuperKarel{
 	}
 	
 	private void checkBeeper() {
+		//Karel checks whether or not beeper presents 
 		if(noBeepersPresent()){
 			putBeeper();
 		}

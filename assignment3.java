@@ -1,6 +1,9 @@
 import stanford.karel.SuperKarel;
 public class assignment3 extends SuperKarel{
     public void run(){
+    	//this is the body of the code. Alghorithm is that Karel has to color each row like 
+    	//a chessboard. After coloring a line he has to return to the starting point of the row
+    	//and ascend to the next line. Karel has to do it for each row.
     	putBeeper();
     	while(leftIsClear()){
     		fillInLine();
@@ -10,6 +13,8 @@ public class assignment3 extends SuperKarel{
     }
 
 	private void fillInLastLine() {
+		//Karel mustn't come back to the starting point of the last row, so, this method 
+		//Determines that Karel fills the last row so that he does not go back
 		while(frontIsClear()){
 			move();
 			if(frontIsClear()){
@@ -20,6 +25,7 @@ public class assignment3 extends SuperKarel{
 	}
 
 	private void ascend() {
+		//this method ascends Karel to the next row and puts the first beeper of the row.
 		if(leftIsClear() & beepersPresent()){
 			turnLeft();
 			move();
@@ -36,6 +42,8 @@ public class assignment3 extends SuperKarel{
 	}
 
 	private void fillInLine() {
+		//Karel moves till the end of the row and colors it like a chessboard and then comes back
+		//to the starting point 
 		while(frontIsClear()){
 			move();
 			if(frontIsClear()){
@@ -47,6 +55,7 @@ public class assignment3 extends SuperKarel{
 	}
 
 	private void turnBack() {
+		//This method returns Karel to the starting point of the row
 		turnAround();
 		while(frontIsClear()){
 			move();
