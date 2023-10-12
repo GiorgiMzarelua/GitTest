@@ -30,14 +30,20 @@ public class assignment3 extends SuperKarel{
 		//this method ascends Karel to the next row and puts the first beeper of the row.
 		if(leftIsClear() & beepersPresent()){
 			turnLeft();
-			move();
+			if(frontIsClear()){
+				move();
+			}
 			turnRight();
-			move();
+			if(frontIsClear()){
+				move();
+			}
 			putBeeper();
 		}
 		if(leftIsClear() & noBeepersPresent()){
 			turnLeft();
-			move();
+			if(frontIsClear()){
+				move();
+			}
 			turnRight();
 			putBeeper();
 		}
@@ -47,7 +53,9 @@ public class assignment3 extends SuperKarel{
 		//Karel moves till the end of the row and colors it like a chessboard and then comes back
 		//to the starting point 
 		while(frontIsClear()){
-			move();
+			if(frontIsClear()){
+				move();
+			}
 			if(frontIsClear()){
 				move();
 				putBeeper();
