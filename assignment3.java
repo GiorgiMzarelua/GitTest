@@ -16,7 +16,9 @@ public class assignment3 extends SuperKarel{
 		//Karel mustn't come back to the starting point of the last row, so, this method 
 		//Determines that Karel fills the last row so that he does not go back
 		while(frontIsClear()){
-			move();
+			if(frontIsClear()){
+			    move();	
+			}
 			if(frontIsClear()){
 				move();
 				putBeeper();
