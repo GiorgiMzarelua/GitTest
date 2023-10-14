@@ -101,7 +101,9 @@ public class test extends SuperKarel{
 			}
 		}
 		ascend();
-		turnBack();
+		if(leftIsClear()){
+			turnBack();
+		}
 	}
 
 	private void turnBack() {
