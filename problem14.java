@@ -11,10 +11,10 @@ public class problem14 extends GraphicsProgram{
 	private static final double NOSE_WIDTH = 10;
 	private static final double MOUSE_WIDTH = 60;
 	private static final double MOUSE_HEIGHT = 20;
-	private static final double EARS_WIDTH = 10;
-	private static final double EARS_HEIGHT = 30;
-	private static final double EARSENDING_WIDTH = 20;
-	private static final double EARSENDING_HEIGHT = 5;
+	private static final double EARS_WIDTH = 20;
+	private static final double EARS_HEIGHT = 50;
+	private static final double EARSENDING_WIDTH = 30;
+	private static final double EARSENDING_HEIGHT = 15;
 	public void run(){
 		drawRobotFace();
 	}
@@ -30,7 +30,7 @@ public class problem14 extends GraphicsProgram{
 	private void drawEars() {
 		GRect ear1 = new GRect(EARS_WIDTH, EARS_HEIGHT);
 		int x1 = (int) (getWidth() / 2 - 70);
-		int y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - 70);
+		int y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - EARS_HEIGHT);
 		ear1.setFilled(true);
 		ear1.setColor(Color.YELLOW);
 		add(ear1, x1, y1);
