@@ -26,14 +26,14 @@ public class problem12 extends GraphicsProgram {
 	private void drawWindows(){
 		GRect window1 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
-		int y1 = (int) (getHeight() - 2 * DOOR_HEIGHT + 40);
+		int y1 = (int) (getHeight() - 3 * DOOR_HEIGHT + 40);
 		window1.setFilled(true);
 		window1.setColor(Color.BLACK);
 		add(window1, x1, y1);
 		
 		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x2 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 - 80);
-		int y2 = (int) (getHeight() - 2 * DOOR_HEIGHT + 40);
+		int y2 = (int) (getHeight() - 3 * DOOR_HEIGHT + 40);
 		window2.setFilled(true);
 		window2.setColor(Color.BLACK);
 		add(window2, x2, y2);
