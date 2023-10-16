@@ -36,7 +36,7 @@ public class problem14 extends GraphicsProgram{
 		add(eye1, x1, y1);
 		
 		GRect eye2 = new GRect(EYE_WIDTH, EYE_HEIGHT);
-		int x2 = (int) (getWidth() / 2 + 70);
+		int x2 = (int) (getWidth() / 2 + 60);
 		int y2 = (int) (getHeight() / 2  - 70);
 		eye2.setFilled(true);
 		eye2.setColor(Color.YELLOW);
