@@ -28,7 +28,7 @@ public class problem14 extends GraphicsProgram{
 	}
 
 	private void drawNose() {
-		GRect nose = new GRect(EYE_WIDTH, EYE_HEIGHT);
+		GRect nose = new GRect(NOSE_WIDTH, NOSE_HEIGHT);
 		int x1 = (int) (getWidth() / 2);
 		int y1 = (int) (getHeight() / 2  - 70);
 		nose.setFilled(true);
