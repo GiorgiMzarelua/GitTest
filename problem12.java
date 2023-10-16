@@ -13,7 +13,21 @@ public class problem12 extends GraphicsProgram {
 		drawWall();
 		drawWindows();
 		drawDoor();
-//		drawRoof();
+		drawRoof();
+	}
+	private void drawRoof() {
+		double x1 = getWidth() / 2 - HOUSE_WIDTH / 2; 
+		double y1 = getHeight() - HOUSE_HEIGHT;
+		double x2 = getWidth() / 2;
+		double y2 = y1 - ROOF_HEIGHT;
+		for( int i = 0; i < 2; i++){
+			if( i == 1 ){
+				x1 = getWidth() / 2 + HOUSE_WIDTH / 2;
+			}
+			GLine roof = new GLine(x1, y1, x2, y2);
+			add(roof);
+		}
+		
 	}
 	private void drawDoor() {
 		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
