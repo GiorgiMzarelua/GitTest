@@ -32,7 +32,7 @@ public class problem14 extends GraphicsProgram{
 		int x = (int) (getWidth() / 2 - FACE_WIDTH / 2 - 70);
 		int y = (int) (getHeight() / 2 - FACE_HEIGHT / 2 - 70);
 		eye1.setFilled(true);
-		eye1.setColor(Color.WHITE);
+		eye1.setColor(Color.YELLOW);
 		add(eye1, x, y);
 		
 	}
