@@ -59,5 +59,12 @@ public class problem12 extends GraphicsProgram {
 		window2.setFilled(true);
 		window2.setColor(Color.WHITE);
 		add(window2, x2, y2);
+		
+		int x3 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
+		int y3 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 20);
+		int x4 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 + 40 + WINDOWS_WIDTH);
+		int y4 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 20);
+		GLine line = new GLine(x3, y3, x4, y4);
+		add(line);
 	}
 }
