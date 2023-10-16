@@ -22,9 +22,19 @@ public class problem14 extends GraphicsProgram{
 	private void drawRobotFace() {
 		drawFace();
     	drawEyes();
-//		drawMouse();
+		drawMouse();
 //		drawNose();
 //		drawEars();
+	}
+
+	private void drawMouse() {
+		GRect mouse = new GRect(MOUSE_WIDTH, MOUSE_HEIGHT);
+		int x1 = (int) (getWidth() / 2 - 70);
+		int y1 = (int) (getHeight() / 2  + 40);
+		mouse.setFilled(true);
+		mouse.setColor(Color.WHITE);
+		add(mouse, x1, y1);
+		
 	}
 
 	private void drawEyes() {
@@ -39,9 +49,8 @@ public class problem14 extends GraphicsProgram{
 		int x2 = (int) (getWidth() / 2 + 50);
 		int y2 = (int) (getHeight() / 2  - 70);
 		eye2.setFilled(true);
-		eye2.setColor(Color.YELLOW);
+		eye2.setColor(Color.WHITE);
 		add(eye2, x2, y2);
-		
 	}
 
 	private void drawFace() {
