@@ -38,8 +38,8 @@ public class problem14 extends GraphicsProgram{
 		GRect eye2 = new GRect(EYE_WIDTH, EYE_HEIGHT);
 		int x2 = (int) (getWidth() / 2 + 70);
 		int y2 = (int) (getHeight() / 2  - 70);
-		eye1.setFilled(true);
-		eye1.setColor(Color.YELLOW);
+		eye2.setFilled(true);
+		eye2.setColor(Color.YELLOW);
 		add(eye2, x2, y2);
 		
 	}
