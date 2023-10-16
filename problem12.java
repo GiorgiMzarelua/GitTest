@@ -20,7 +20,7 @@ public class problem12 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - DOOR_WIDTH / 2);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
 		wall.setFilled(true);
-		wall.setColor(Color.LIGHT_GRAY);
+		wall.setColor(Color.YELLOW);
 		add(wall, x, y);
 	}
 	private void drawWall() {
@@ -28,7 +28,7 @@ public class problem12 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
 		int y = (int) (getHeight() - HOUSE_HEIGHT);
 		wall.setFilled(true);
-		wall.setColor(Color.DARK_GRAY);
+		wall.setColor(Color.BLACK);
 		add(wall, x, y);
 	}
 	private void drawWindows(){
@@ -36,14 +36,14 @@ public class problem12 extends GraphicsProgram {
 		int x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
 		int y1 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 40);
 		window1.setFilled(true);
-		window1.setColor(Color.BLACK);
+		window1.setColor(Color.WHITE);
 		add(window1, x1, y1);
 		
 		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x2 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 - 80);
 		int y2 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 40);
 		window2.setFilled(true);
-		window2.setColor(Color.BLACK);
+		window2.setColor(Color.WHITE);
 		add(window2, x2, y2);
 	}
 }
