@@ -40,7 +40,7 @@ public class problem14 extends GraphicsProgram{
 		y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - EARS_HEIGHT);
 		ear2.setFilled(true);
 		ear2.setColor(Color.YELLOW);
-		add(ear2, x1, y1)
+		add(ear2, x1, y1);
 		
 		GRect earEnding1 = new GRect(EARSENDING_WIDTH, EARSENDING_HEIGHT);
 		x1 = (int) (getWidth() / 2 + 45);
@@ -50,7 +50,7 @@ public class problem14 extends GraphicsProgram{
 		add(earEnding1, x1, y1);
 		
 		GRect earEnding2 = new GRect(EARSENDING_WIDTH, EARSENDING_HEIGHT);
-		x1 = (int) (getWidth() / 2 - 75);
+		x1 = (int) (getWidth() / 2 - 70);
 		y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - EARS_HEIGHT - EARSENDING_HEIGHT);
 		earEnding2.setFilled(true);
 		earEnding2.setColor(Color.RED);
