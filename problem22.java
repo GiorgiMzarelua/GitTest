@@ -20,7 +20,6 @@ public class problem22 extends GraphicsProgram{
 			rec.setColor(Color.BLACK);
 			add(rec, x, y);
 		}
-		
 	}
 
 	private void startBlackRow() {
