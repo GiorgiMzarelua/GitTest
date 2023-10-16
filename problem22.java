@@ -13,7 +13,7 @@ public class problem22 extends GraphicsProgram{
 	private void startBlackRow() {
 		for(int i = 0; i < 4; i++){
 			GRect rec = new GRect(getWidth() / 8, getHeight() / 8);
-			double x = (double) (getWidth() *  i / 8);
+			double x = (double) (getWidth() *  i / 4);
 			double y = (double) (getHeight() / 8);
 			rec.setFilled(true);
 			rec.setColor(Color.BLACK);
