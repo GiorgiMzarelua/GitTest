@@ -1,121 +1,75 @@
-import stanford.karel.SuperKarel;
-public class test extends SuperKarel{
-    public void run(){
-    	/*
-    	 * this is the body of the code. Alghorithm is that Karel has to color each row like 
-    	 * a chessboard. After coloring a line he has to return to the starting point of the row
-    	 * and ascend to the next line. Karel has to do it for each row.
-    	 */
-    	if(frontIsBlocked()){
-    		oneWidthColumn();
-    	}
-    	else{
-    		putBeeper();
-    	    while( leftIsClear()) 
-    	    {
-    		    fillInLine();
-    		    ascend();
-    	    }
-    	    fillInLastLine();
-    	}
-    }
-
-	private void oneWidthColumn() {
-		/*
-		 * If the width of the world is equal to one, then this method will solve this problem
-		 * without making non-necessary moves.
-		 */
-		putBeeper();
-        turnLeft();
-        while(frontIsClear()){
-        	move();
-        	if(frontIsClear()){
-        		move();
-        		putBeeper();
-        	}
-        }
+import java.awt.Color;
+import acm.graphics.*;
+import acm.program.GraphicsProgram;
+public class test extends GraphicsProgram {
+	private static final double HOUSE_WIDTH = 200;
+	private static final double HOUSE_HEIGHT  = 300;
+	private static final double DOOR_WIDTH  = 50;
+	private static final double DOOR_HEIGHT  = 100;
+	private static final double ROOF_HEIGHT  = 100;
+	private static final double WINDOWS_WIDTH = 40;
+	private static final double WINDOWS_HEIGHT  = 40;
+	public void run() {
+		drawHouse();
 	}
-
-	private void fillInLastLine() {
-		/*
-		 * Karel mustn't come back to the starting point of the last row, so, this method 
-		 * determines that Karel fills the last row so that he does not go back.
-		 */
+	
+	private void drawHouse() {
+		drawWall();
+		drawRoof();
+		drawDoor();
+		drawWindows();
+	}
+	private void drawWall() {
+		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
+		int y = (int) (getHeight() - HOUSE_HEIGHT);
+		wall.setFilled(true);
+		wall.setColor(Color.DARK_GRAY);
+		add(wall, x, y);
+	}
+	private void drawRoof() {
+		double x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
+		double y1 = (int) (getHeight() - HOUSE_HEIGHT);
+		double x2 = x1 + HOUSE_WIDTH / 2;
+		double y2 = y1 - ROOF_HEIGHT;
 		
-		while(frontIsClear()){
-			move();
-			if(frontIsClear()){
-				move();
-				putBeeper();
+		for(int i = 0; i < 2; i ++) {
+			if(i == 0) {
+				
 			}
+			else {
+				x1 = x2;
+				y1 = y2;
+				x2 = x1 + HOUSE_WIDTH / 2;
+				y2 = y1 + ROOF_HEIGHT;
+			}
+			GLine leftRoof = new GLine(x1, y1, x2, y2);
+			add(leftRoof); 
 		}
 	}
-
-	private void ascend() {
-		/*
-		 * this method ascends Karel to the next row and puts the first beeper of the row.
-		 */
-		facingNorth();
-		if(frontIsClear() & leftIsBlocked() & beepersPresent()){
-			move();
-			if(rightIsClear()){
-				rightIsClear();
-				move();
-				putBeeper();
-			}
-		}
-		if(frontIsClear() & rightIsBlocked() & beepersPresent()){
-			move();
-			if(leftIsClear()){
-				turnLeft();
-				move();
-				putBeeper();
-			}
-		}
-		if(frontIsClear() & rightIsBlocked() & noBeepersPresent()){
-			move();
-			if(leftIsClear()){
-				turnLeft();
-			}
-			putBeeper();
-		}
-		if(frontIsClear() & leftIsBlocked() & noBeepersPresent()){
-			move();
-			if(rightIsClear()){
-				turnRight();
-			}
-			putBeeper();
-		}
+	
+	private void drawDoor() {
+		GRect door = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 1.5);
+		int y = (int) (getHeight() - DOOR_HEIGHT);
+		door.setFilled(true);
+		door.setColor(Color.lightGray);
+		add(door, x, y);
 	}
-
-	private void fillInLine() {
-		/*
-		 * Karel moves till the end of the row and colors it like a chessboard and then comes back
-		 *to the starting point.
-		 */
-		while( frontIsClear() ){
-			move();
-			if( frontIsClear() ){
-				move();
-				putBeeper();
-			}
-		}
-		ascend();
-		if(leftIsClear()){
-			turnBack();
-		}
-	}
-
-	private void turnBack() {
-		/*
-		 * This method returns Karel to the starting point of the row.
-		 */
-		while(frontIsClear()){
-			move();
-			if(frontIsClear()){
-				move();
-				putBeeper();
-			}
-		}
+	
+	private void drawWindows() {
+		GRect window1 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 20);
+		int y1 = (int) (getHeight() - DOOR_HEIGHT - 125);
+		window1.setFilled(true);
+		window1.setColor(Color.BLACK);
+		add(window1, x1, y1);
+		
+		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x2 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + DOOR_WIDTH * 2);
+		int y2 = (int) (getHeight() - DOOR_HEIGHT - 125);
+		window2.setFilled(true);
+		window2.setColor(Color.BLACK);
+		add(window2, x2, y2);
 	}
 }
