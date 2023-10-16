@@ -32,7 +32,7 @@ public class problem12 extends GraphicsProgram {
 		add(window1, x1, y1);
 		
 		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
-		int x2 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 - 60);
+		int x2 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 - 80);
 		int y2 = (int) (getHeight() - DOOR_HEIGHT + 40);
 		window2.setFilled(true);
 		window2.setColor(Color.BLACK);
