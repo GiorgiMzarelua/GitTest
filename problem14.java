@@ -21,10 +21,20 @@ public class problem14 extends GraphicsProgram{
 
 	private void drawRobotFace() {
 		drawFace();
-//		drawEyes();
+    	drawEyes();
 //		drawMouse();
 //		drawNose();
 //		drawEars();
+	}
+
+	private void drawEyes() {
+		GRect eye1 = new GRect(EYE_WIDTH, EYE_HEIGHT);
+		int x = (int) (getWidth() / 2 - FACE_WIDTH / 2 - 70);
+		int y = (int) (getHeight() / 2 - FACE_HEIGHT / 2 - 70);
+		eye1.setFilled(true);
+		eye1.setColor(Color.WHITE);
+		add(eye1, x, y);
+		
 	}
 
 	private void drawFace() {
@@ -35,4 +45,6 @@ public class problem14 extends GraphicsProgram{
 		face.setColor(Color.BLACK);
 		add(face, x, y);
 	} 
+	
+	
 }
