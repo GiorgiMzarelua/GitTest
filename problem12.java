@@ -80,5 +80,12 @@ public class problem12 extends GraphicsProgram {
 		y4 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 60);
 		GLine line3 = new GLine(x3, y3, x4, y4);
 		add(line3);
+		
+		x3 = (double) (getWidth() / 2 + HOUSE_WIDTH / 2 - 60);
+		y3 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 40);
+		x4 = (double) (getWidth() / 2 + HOUSE_WIDTH / 2 - 60);
+		y4 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 80);
+		GLine line4 = new GLine(x3, y3, x4, y4);
+		add(line4);
 	}
 }
