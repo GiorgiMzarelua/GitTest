@@ -23,8 +23,18 @@ public class problem14 extends GraphicsProgram{
 		drawFace();
     	drawEyes();
 		drawMouse();
-//		drawNose();
+		drawNose();
 //		drawEars();
+	}
+
+	private void drawNose() {
+		GRect nose = new GRect(EYE_WIDTH, EYE_HEIGHT);
+		int x1 = (int) (getWidth() / 2);
+		int y1 = (int) (getHeight() / 2  - 70);
+		nose.setFilled(true);
+		nose.setColor(Color.WHITE);
+		add(nose, x1, y1);
+		
 	}
 
 	private void drawMouse() {
@@ -34,7 +44,6 @@ public class problem14 extends GraphicsProgram{
 		mouse.setFilled(true);
 		mouse.setColor(Color.WHITE);
 		add(mouse, x1, y1);
-		
 	}
 
 	private void drawEyes() {
