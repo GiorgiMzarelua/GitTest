@@ -6,7 +6,6 @@ public class problem13 extends GraphicsProgram{
 	public void run(){
 		drawLine();
 	}
-
 	private void drawLine() {
 		double x1 = 0;
 		double y1 = getHeight() / 2;
