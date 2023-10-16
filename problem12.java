@@ -12,8 +12,16 @@ public class problem12 extends GraphicsProgram {
 	public void run(){
 		drawWall();
 		drawWindows();
-//		drawDoor();
+		drawDoor();
 //		drawRoof();
+	}
+	private void drawDoor() {
+		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
+		int x = (int) (getWidth() / 2 - DOOR_WIDTH / 2);
+		int y = (int) (getHeight() - DOOR_HEIGHT);
+		wall.setFilled(true);
+		wall.setColor(Color.LIGHT_GRAY);
+		add(wall, x, y);
 	}
 	private void drawWall() {
 		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
