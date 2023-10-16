@@ -11,7 +11,7 @@ public class problem12 extends GraphicsProgram {
 	private static final double WINDOWS_HEIGHT  = 40;
 	public void run(){
 		drawWall();
-//		drawWindows();
+		drawWindows();
 //		drawDoor();
 //		drawRoof();
 	}
@@ -22,5 +22,20 @@ public class problem12 extends GraphicsProgram {
 		wall.setFilled(true);
 		wall.setColor(Color.DARK_GRAY);
 		add(wall, x, y);
+	}
+	private void drawWindows(){
+		GRect window1 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
+		int y1 = (int) (getHeight() - DOOR_HEIGHT + 40);
+		window1.setFilled(true);
+		window1.setColor(Color.BLACK);
+		add(window1, x1, y1);
+		
+		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x2 = (int) (getWidth() / 2 + HOUSE_WIDTH / 2 - 100);
+		int y2 = (int) (getHeight() - DOOR_HEIGHT + 40);
+		window2.setFilled(true);
+		window2.setColor(Color.BLACK);
+		add(window2, x2, y2);
 	}
 }
