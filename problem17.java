@@ -8,7 +8,7 @@ public class problem17 extends ConsoleProgram{
         	
         }
     	double ans2 = num - ans1;
-    	print("INTEGER PART OF THE NUMBER: " + ans1);
+    	println("INTEGER PART OF THE NUMBER: " + ans1);
     	print("FRACTIONAL PART OF THE NUMBER " + ans2);
     }
 }
