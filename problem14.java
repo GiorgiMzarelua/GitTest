@@ -29,8 +29,8 @@ public class problem14 extends GraphicsProgram{
 
 	private void drawEars() {
 		GRect ear1 = new GRect(EARS_WIDTH, EARS_HEIGHT);
-		int x1 = (int) (getWidth() / 2 - 140);
-		int y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2);
+		int x1 = (int) (getWidth() / 2 - 70);
+		int y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - 70);
 		ear1.setFilled(true);
 		ear1.setColor(Color.YELLOW);
 		add(ear1, x1, y1);
