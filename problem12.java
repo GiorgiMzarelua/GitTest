@@ -60,11 +60,18 @@ public class problem12 extends GraphicsProgram {
 		window2.setColor(Color.WHITE);
 		add(window2, x2, y2);
 		
-		int x3 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
-		int y3 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 60);
-		int x4 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + WINDOWS_WIDTH);
-		int y4 = (int) (getHeight() - 2.5 * DOOR_HEIGHT + 60);
+		double x3 = (double) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40);
+		double y3 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 60);
+		double x4 = (double) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + WINDOWS_WIDTH);
+		double y4 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 60);
 		GLine line = new GLine(x3, y3, x4, y4);
 		add(line);
+		
+		x3 = (double) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + WINDOWS_WIDTH / 2);
+		y3 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 40);
+		x4 = (double) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + WINDOWS_WIDTH / 2);
+		y4 = (double) (getHeight() - 2.5 * DOOR_HEIGHT + 80);
+		GLine line2 = new GLine(x3, y3, x4, y4);
+		add(line2);
 	}
 }
