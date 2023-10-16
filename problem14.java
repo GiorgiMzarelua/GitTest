@@ -29,7 +29,7 @@ public class problem14 extends GraphicsProgram{
 
 	private void drawMouse() {
 		GRect mouse = new GRect(MOUSE_WIDTH, MOUSE_HEIGHT);
-		int x1 = (int) (getWidth() / 2 - 70);
+		int x1 = (int) (getWidth() / 2 - 20);
 		int y1 = (int) (getHeight() / 2  + 40);
 		mouse.setFilled(true);
 		mouse.setColor(Color.WHITE);
