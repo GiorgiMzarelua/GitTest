@@ -48,6 +48,13 @@ public class problem14 extends GraphicsProgram{
 		earEnding1.setFilled(true);
 		earEnding1.setColor(Color.RED);
 		add(earEnding1, x1, y1);
+		
+		GRect earEnding2 = new GRect(EARSENDING_WIDTH, EARSENDING_HEIGHT);
+		x1 = (int) (getWidth() / 2 - 65);
+		y1 = (int) (getHeight() / 2  - FACE_HEIGHT / 2 - EARS_HEIGHT - EARSENDING_HEIGHT);
+		earEnding2.setFilled(true);
+		earEnding2.setColor(Color.RED);
+		add(earEnding2, x1, y1);
 	}
 
 	private void drawNose() {
