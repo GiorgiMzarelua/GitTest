@@ -29,11 +29,18 @@ public class problem14 extends GraphicsProgram{
 
 	private void drawEyes() {
 		GRect eye1 = new GRect(EYE_WIDTH, EYE_HEIGHT);
-		int x = (int) (getWidth() / 2 - 70);
-		int y = (int) (getHeight() / 2  - 70);
+		int x1 = (int) (getWidth() / 2 - 70);
+		int y1 = (int) (getHeight() / 2  - 70);
 		eye1.setFilled(true);
-		eye1.setColor(Color.YELLOW);
-		add(eye1, x, y);
+		eye1.setColor(Color.WHITE);
+		add(eye1, x1, y1);
+		
+		GRect eye2 = new GRect(EYE_WIDTH, EYE_HEIGHT);
+		int x2 = (int) (getWidth() / 2 + 70);
+		int y2 = (int) (getHeight() / 2  + 70);
+		eye1.setFilled(true);
+		eye1.setColor(Color.WHITE);
+		add(eye2, x2, y2);
 		
 	}
 
