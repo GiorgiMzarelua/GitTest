@@ -11,6 +11,4 @@ public class problem27 extends ConsoleProgram{
 		 }
 		 print("THIS IS THE ANSWER: " + ans);
 	}
-  
-    
 }
