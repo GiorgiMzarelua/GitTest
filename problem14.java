@@ -99,7 +99,5 @@ public class problem14 extends GraphicsProgram{
 		face.setFilled(true);
 		face.setColor(Color.BLACK);
 		add(face, x, y);
-	} 
-	
-	
+	} 	
 }
