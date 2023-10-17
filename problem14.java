@@ -15,6 +15,8 @@ public class problem14 extends GraphicsProgram{
 	private static final double EARS_HEIGHT = 50;
 	private static final double EARSENDING_WIDTH = 30;
 	private static final double EARSENDING_HEIGHT = 15;
+	private static final double EYEBROW_WIDTH = 5;
+	private static final double EYEBROW_HEIGHT = 5;
 	public void run(){
 		drawRobotFace();
 	}
@@ -78,8 +80,8 @@ public class problem14 extends GraphicsProgram{
 
 	private void drawEyes() {
 		GRect eye1 = new GRect(EYE_WIDTH, EYE_HEIGHT);
-		int x1 = (int) (getWidth() / 2 - 70);
-		int y1 = (int) (getHeight() / 2  - 70);
+		double x1 = (int) (getWidth() / 2 - 70);
+		double y1 = (int) (getHeight() / 2  - 70);
 		eye1.setFilled(true);
 		eye1.setColor(Color.WHITE);
 		add(eye1, x1, y1);
@@ -90,6 +92,21 @@ public class problem14 extends GraphicsProgram{
 		eye2.setFilled(true);
 		eye2.setColor(Color.WHITE);
 		add(eye2, x2, y2);
+		
+		GRect eyeBrow1 = new GRect(EYEBROW_WIDTH, EYEBROW_HEIGHT);
+		x1 = (double) (getWidth() / 2 - 62.5);
+		y1 = (double) (getHeight() / 2 - 62.5);
+		eyeBrow1.setFilled(true);
+		eyeBrow1.setColor(Color.BLUE);
+		add(eyeBrow1, x1, y1);
+		
+		GRect eyeBrow2 = new GRect(EYEBROW_WIDTH, EYEBROW_HEIGHT);
+		x1 = (double) (getWidth() / 2 + 57.5);
+		y1 = (double) (getHeight() / 2 - 62.5);
+		eyeBrow2.setFilled(true);
+		eyeBrow2.setColor(Color.BLUE);
+		add(eyeBrow2, x1, y1);
+		
 	}
 
 	private void drawFace() {
