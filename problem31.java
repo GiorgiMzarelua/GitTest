@@ -11,9 +11,7 @@ public class problem31 extends ConsoleProgram{
     			println("THIS IS NOT A PRIME NUMBER.");
     			break; 
     		}
-    		else{
-    			println("THIS IS A PRIME NUMBER.");
-    		}
     	}
+	    println("THIS IS A PRIME NUMBER.");
     }
 }
