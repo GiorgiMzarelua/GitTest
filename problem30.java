@@ -3,8 +3,8 @@ import acm.program.ConsoleProgram;
 public class problem30 extends ConsoleProgram{
     public void run(){
     	int m = readInt("ENTER THE NUMBER: ");
-    	quantityOfDigits(m);
-    	
+    	int ans = quantityOfDigits(m);
+    	println("THIS IS THE ANSWER: " + ans);
     }
 
 	private int quantityOfDigits(int m) {
