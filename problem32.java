@@ -8,7 +8,7 @@ public class problem32 extends ConsoleProgram{
     				counter++;
     			}
     		}
-    		if(counter > 0){
+    		if(counter == 0){
     			println(i);
     		}
     		counter = 0;
