@@ -4,20 +4,20 @@ public class seminari9evklide extends ConsoleProgram{
     public void run(){
     	int a =readInt("enter the first number: ");
     	int b =readInt("enter the second number: ");
-    	euklide(a , b);
-    	
+    	print("THIS IS THE ANSWER: " + euklide(a, b));
     }
 
-	private void euklide(int a, int b) {
-		int c = 0;
-		int d = Math.max(a , b);
-	    int e = Math.min(a, b);
-	    a = d;
-	    b = e;
-		while(a == 0 || b == 0 ){
-			c = a % b;
-			a =  
-			
-		}
+	private int euklide(int a, int b) {
+        int c = Math.max(a , b);
+        b = Math.min( a,  b);
+        a = c;
+        int d = 0;
+        while(b == 0){
+        	c = a % b;
+        	d = b;
+        	b = c;
+        	a = d;
+        }
+		return a;
 	}
 }
