@@ -18,6 +18,6 @@ public class seminari9evklide extends ConsoleProgram{
         	b = c;
         	a = d;
         }
-		return a;
+		return d;
 	}
 }
