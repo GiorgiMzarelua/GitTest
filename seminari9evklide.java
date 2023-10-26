@@ -19,6 +19,5 @@ public class seminari9evklide extends ConsoleProgram{
         	a = d;
         }
 		return a;
-		
 	}
 }
