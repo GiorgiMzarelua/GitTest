@@ -11,8 +11,10 @@ public class seminari10 extends GraphicsProgram{
 		drawAtriangle(size);
 	}
 
-	private void drawAtriangle(int size) {
+	private GPolygon drawAtriangle(int size) {
 		GPolygon triangle = new GPolygon();
 		triangle.addVertex(0, size);
+		return triangle;
+		
 	}
 }
