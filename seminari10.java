@@ -15,7 +15,7 @@ public class seminari10 extends GraphicsProgram{
 		GPolygon triangle = new GPolygon();
 		triangle.addVertex(0, 0);
 		triangle.addVertex(size, 0);
-		triangle.addVertex(size / 2, size * Math.sqrt(3) / 4);
+		triangle.addVertex(size / 2, size * Math.sqrt(3) / 2);
 		return triangle;
 	}
 }
