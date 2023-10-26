@@ -7,7 +7,7 @@ import acm.program.GraphicsProgram;
  */
 public class seminari10 extends GraphicsProgram{
 	public void run(){
-		int size = 100;
+		int size = 10;
 		add(drawAtriangle(size));
 	}
 
