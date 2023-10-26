@@ -12,12 +12,13 @@ public class seminari9evklide extends ConsoleProgram{
         b = Math.min( a,  b);
         a = c;
         int d = 0;
-        while(b == 0){
+        while(b != 0){
         	c = a % b;
         	d = b;
         	b = c;
         	a = d;
         }
-		return ;
+		return a;
+		
 	}
 }
