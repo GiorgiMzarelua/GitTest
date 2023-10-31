@@ -6,5 +6,5 @@ public class problem33 extends ConsoleProgram{
     public void run(){
     	print(rgen);
     }
-    private RandomGenerator rgen = RandomGenerator.getInstance();
+    private RandomGenerator rgen = RandomGenerator.getInstance(STARTING_RANGE, FINAL_RANGE);
 }
