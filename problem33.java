@@ -8,7 +8,7 @@ public class problem33 extends GraphicsProgram{
     public void run(){
     	RandomGenerator rgen = new RandomGenerator();
     	int radius =  rgen.nextInt(STARTING_RANGE, FINAL_RANGE);
-    	GOval circle = new GOval(getWidth() / 2 - radius, getHeight() / 2 - radius, radius, radius);
+    	GOval circle = new GOval(getWidth() / 2 - radius, getHeight() / 2 - radius, 2* radius, 2 * radius);
     	circle.setFilled(true);
     	Color randColor = rgen.nextColor();
     	circle.setColor(randColor);
