@@ -3,8 +3,8 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.*;
 public class problem33 extends GraphicsProgram{
-	public static final int STARTING_RANGE = 399;
-	public static final int FINAL_RANGE = 400;
+	public static final int STARTING_RANGE = 199;
+	public static final int FINAL_RANGE = 200;
     public void run(){
     	RandomGenerator rgen = new RandomGenerator();
     	int radius =  rgen.nextInt(STARTING_RANGE, FINAL_RANGE);
