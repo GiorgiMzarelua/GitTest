@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 import acm.util.*;
 public class problem33 extends GraphicsProgram{
 	public static final int STARTING_RANGE = 100;
-	public static final int FINAL_RANGE = 200;
+	public static final int FINAL_RANGE = 400;
     public void run(){
     	RandomGenerator rgen = new RandomGenerator();
     	int radius =  rgen.nextInt(STARTING_RANGE, FINAL_RANGE);
