@@ -3,7 +3,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.*;
 public class problem33 extends GraphicsProgram{
-	public static final int STARTING_RANGE = 100;
+	public static final int STARTING_RANGE = 399;
 	public static final int FINAL_RANGE = 400;
     public void run(){
     	RandomGenerator rgen = new RandomGenerator();
