@@ -10,7 +10,7 @@ public class problem34 extends GraphicsProgram{
 	public static final int NUM_CIRCLES = 1000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
     public void run(){
-    	for(int i = 0; i < 1000; i++){
+    	for(int i = 0; i < NUM_CIRCLES; i++){
     		addCircles();
     	}
     }
