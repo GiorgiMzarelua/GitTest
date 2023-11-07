@@ -10,7 +10,7 @@ public class problem39 extends GraphicsProgram{
 		circle.setFilled(true);
 		add(circle);
 		
-		int finalX = getWidth() - 2 * RADIUS;
+		int finalX = getWidth() - 2 * RADIUS - INITIAL_VELOCITY;
 		while(circle.getX() <= finalX){
 			circle.move(INITIAL_VELOCITY, 0);
 			pause(PAUSE_TIME);
