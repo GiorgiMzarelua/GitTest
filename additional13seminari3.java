@@ -14,7 +14,7 @@ public class additional13seminari3 extends GraphicsProgram{
 		circle.setFilled(true);
 		Color color = rgen.nextColor();
 		circle.setColor(color);
-		add(cirlce);
+		add(circle);
 		return circle;
 	}
 }
