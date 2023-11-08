@@ -17,7 +17,7 @@ public class problem37 extends ConsoleProgram{
     }
 	private int filterNumbers() {
 		while(true){
-			int Num = readInt("Enter the number from " + MIN_VALUE + " to " + MAX_VALUE);
+			int Num = readInt("Enter the number from " + MIN_VALUE + " to " + MAX_VALUE + ": ");
 			if(Num >= MIN_VALUE && Num <= MAX_VALUE){
 				return 0;
 			}
