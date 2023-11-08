@@ -16,7 +16,7 @@ public class additional13seminari2 extends GraphicsProgram{
 				while(circle.getY() <= getHeight() - 2 * RADIUS){
 					circle.move(0, speed);
 					pause(PAUSE_TIME);
-					if(speed >= getHeight() - speed){
+					if(speed <= getHeight() - speed){
 						speed = speed + ACCELERATION;
 					}
 					else{
