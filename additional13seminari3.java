@@ -4,7 +4,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 public class additional13seminari3 extends GraphicsProgram{
-	private static final int RADIUS = 15;
+	private static final int RADIUS = 25;
 	private static final int PAUSE_TIME = 20;
 	private static final int INITIAL_VELOCITY = 5;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
