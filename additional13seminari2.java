@@ -10,21 +10,24 @@ public class additional13seminari2 extends GraphicsProgram{
 	private static final int SPEED_DECREASE = 15;
 	public void run(){
 		GOval circle = drawCircle();
-	    int speed = 1; 
-		while(speed > 0){
-			if(speed <= ACCELERATION){
+	    int speed1 = 1; 
+	    int speed2 = 1;
+		while(speed1 > 0){
+			if(speed2 <= ACCELERATION){
 				while(circle.getY() <= getHeight() - 2 * RADIUS){
-					circle.move(0, speed);
+					circle.move(0, speed2);
 					pause(PAUSE_TIME);
-					speed = speed + ACCELERATION;
+					speed2 = speed2 + ACCELERATION;
+					speed1 = speed1 + ACCELERATION;
 				}
 			}
 			else{
-				while(speed > ACCELERATION){
-					circle.move(0, -speed);
+				while(speed2 > ACCELERATION){
+					circle.move(0, -speed2);
 					pause(PAUSE_TIME);
-					if(speed - SPEED_DECREASE >= -6){
-						speed = speed - SPEED_DECREASE;
+					if(speed2 - SPEED_DECREASE >= -6){
+						speed2 = speed2 - SPEED_DECREASE;
+						speed1 = speed1 - SPEED_DECREASE;
 					}
 				}
 			}
