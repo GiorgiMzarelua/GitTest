@@ -11,7 +11,7 @@ public class additional13seminari2 extends GraphicsProgram{
 	public void run(){
 		GOval circle = drawCircle();
 	    int speed = 1; 
-		while(speed > 0 && circle.getY() < getHeight() - 2 * RADIUS - 3){
+		while(speed > 0 && circle.getY() < getHeight() - 2 * RADIUS){
 			if(speed <= ACCELERATION){
 				while(circle.getY() <= getHeight() - 2 * RADIUS){
 					circle.move(0, speed);
