@@ -18,14 +18,14 @@ public class problem38 extends ConsoleProgram{
 			}
 			else{
 				currMoney = currMoney - bet;
-				println("Unfortunately you lost. Now you have " + currMoney + " dollars");
+				println("Unfortunately you lost. Now you have " + currMoney + " dollars left.");
 			}
 		}
 	}
 	
 	private int filterMoney(int currMoney) {
 		while(true){
-			int BET = readInt("Enter the number from " + 1 + " to " + currMoney + ": ");
+			int BET = readInt("Enter your bet from " + 1 + " to " + currMoney + ": ");
 			if(BET >= 1 && BET <= currMoney){
 				return BET;
 			}
