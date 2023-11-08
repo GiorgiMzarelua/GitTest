@@ -5,9 +5,17 @@ import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 public class additional13seminari3 extends GraphicsProgram{
 	private static final int RADIUS = 35;
+	private static final int PAUSE_TIME = 20;
+	private static final int INITIAL_VELOCITY = 5;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
     public void run(){
         GOval randomBall = drawBall();
+        double a = rgen.nextDouble(0,INITIAL_VELOCITY);
+        double b = Math.sqrt(INITIAL_VELOCITY * INITIAL_VELOCITY - a * a);
+        while(true){
+        	randomBall.move(a, b);
+			pause(PAUSE_TIME);
+        }
     }
 	private GOval drawBall() {
 		GOval circle = new GOval(getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS, 2 * RADIUS, 2 * RADIUS);
