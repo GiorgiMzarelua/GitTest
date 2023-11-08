@@ -19,7 +19,7 @@ public class problem37 extends ConsoleProgram{
 		while(true){
 			int Num = readInt("Enter the number from " + MIN_VALUE + " to " + MAX_VALUE + ": ");
 			if(Num >= MIN_VALUE && Num <= MAX_VALUE){
-				return 0;
+				return Num;
 			}
 		}
 	}
