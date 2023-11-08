@@ -19,7 +19,7 @@ public class problem40 extends GraphicsProgram{
 				}
 			}
 			else{
-				while(circle.getX() >= finalX){
+				while(circle.getX() >= 0){
 					circle.move(-INITIAL_VELOCITY, 0);
 					pause(PAUSE_TIME);
 				}
