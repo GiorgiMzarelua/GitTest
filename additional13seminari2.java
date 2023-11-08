@@ -23,7 +23,7 @@ public class additional13seminari2 extends GraphicsProgram{
 				while(speed > ACCELERATION){
 					circle.move(0, -speed);
 					pause(PAUSE_TIME);
-					if(speed - SPEED_DECREASE >= 0){
+					if(speed - SPEED_DECREASE >= -1){
 						speed = speed - SPEED_DECREASE;
 					}
 				}
