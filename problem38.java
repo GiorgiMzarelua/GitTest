@@ -14,9 +14,11 @@ public class problem38 extends ConsoleProgram{
 			int bet = filterMoney(currMoney);
 			if(betNumber == roulleteNumber){
 				currMoney = currMoney * 2;
+				println("Congretulations! You won. Now you have " + currMoney + " dollars");
 			}
 			else{
 				currMoney = currMoney - betNumber;
+				println("Unfortunately you lost. Now you have " + currMoney + " dollars");
 			}
 		}
 	}
