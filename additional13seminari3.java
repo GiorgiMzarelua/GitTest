@@ -12,8 +12,14 @@ public class additional13seminari3 extends GraphicsProgram{
         GOval randomBall = drawBall();
         double a = rgen.nextDouble(0,INITIAL_VELOCITY);
         double b = Math.sqrt(INITIAL_VELOCITY * INITIAL_VELOCITY - a * a);
-        a = rgen.nextDouble(-a, a);
-        b = rgen.nextDouble(-b, b);
+        int c = rgen.nextInt(0, 1);
+        if(c == 0){
+        	a = -a;
+        }
+        int d = rgen.nextInt(1, 2);
+        if(d == 1){
+        	b = -b;
+        }
         while(true){
         	randomBall.move(a, b);
 			pause(PAUSE_TIME);
