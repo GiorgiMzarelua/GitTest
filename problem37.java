@@ -17,7 +17,6 @@ public class problem37 extends ConsoleProgram{
     }
 	private int spinRoullete() {
 		int result = rgen.nextInt(MIN_VALUE, MAX_VALUE);
-		println(result);
 		return result;
 	}
 }
