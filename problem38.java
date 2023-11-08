@@ -8,7 +8,7 @@ public class problem38 extends ConsoleProgram{
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	public void run(){
 		int currMoney = STARTING_MONEY;
-		while(currMoney >= 0){
+		while(currMoney > 0){
 			int betNumber = filterNumbers();
 			int roulleteNumber = spinRoullete();
 			int bet = filterMoney(currMoney);
