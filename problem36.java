@@ -1,17 +1,17 @@
 import acm.program.ConsoleProgram;
-import acm.util.RandomGenerator; 
+import acm.util.RandomGenerator;
 
 public class problem36 extends ConsoleProgram{
-	private static final int NUM_EXPERIMENTS = 1000;
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+    private static final int NUM_EXPERIMENTS = 100000;
+    private RandomGenerator rgen = RandomGenerator.getInstance();
     public void run(){
-    	int sumFlips = 0;
+    	double sumFlips = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){
     		int currFlips = holdExperiment();
     		sumFlips += currFlips;
     	}
-    	int avgFlips = sumFlips / NUM_EXPERIMENTS;
-    	println("this is the average number of getting head three times in a row: " + avgFlips);
+    	double avgFlips = sumFlips / NUM_EXPERIMENTS;
+    	println("this is the average number of getting head: " + avgFlips);
     }
 	private int holdExperiment() {
 		int numFlips = 0;
