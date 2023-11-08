@@ -20,15 +20,14 @@ public class problem36 extends ConsoleProgram{
 			numFlips++;
 			boolean isHeads = rgen.nextBoolean(0.4);
 			if(isHeads){
-				    headsInArow++;
-				    if(headsInArow == 3){
-					break;
-				    }
-			else{
-					headsInArow = 0;
-				}
-			}
-		}
+				headsInArow++;
+			    if(headsInArow == 3){
+				break;
+			    } 
+			}    else{
+				     headsInArow = 0;
+				 }
+		    }
 		return numFlips;
 	}
 }
