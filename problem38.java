@@ -17,7 +17,7 @@ public class problem38 extends ConsoleProgram{
 				println("Congretulations! You won. Now you have " + currMoney + " dollars");
 			}
 			else{
-				currMoney = currMoney - roulleteNumber;
+				currMoney = currMoney - bet;
 				println("Unfortunately you lost. Now you have " + currMoney + " dollars");
 			}
 		}
