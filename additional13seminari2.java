@@ -13,6 +13,7 @@ public class additional13seminari2 extends GraphicsProgram{
 		GOval circle = new GOval(getWidth() / 2 - RADIUS, 0, 2 * RADIUS, 2* RADIUS);
 		circle.setFilled(true);
 		circle.setColor(Color.RED);
+		add(circle);
 		return circle;
 	}
 
