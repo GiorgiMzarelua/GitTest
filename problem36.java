@@ -20,11 +20,11 @@ public class problem36 extends ConsoleProgram{
 			numFlips++;
 			boolean isHeads = rgen.nextBoolean(0.4);
 			if(isHeads){
-				headsInArow++;
-				if(headsInArow == 3){
+				    headsInArow++;
+				    if(headsInArow == 3){
 					break;
-				}
-				else{
+				    }
+			else{
 					headsInArow = 0;
 				}
 			}
