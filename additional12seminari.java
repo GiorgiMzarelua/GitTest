@@ -14,7 +14,7 @@ public class additional12seminari extends GraphicsProgram{
     	int GREEN = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		int k = rgen.nextInt(0, 1);
-    		GOval ball = drawCircle(RED, GREEN, k);
+    		GOval ball = drawCircle(k);
     		if(k == 0){
     			GLabel HT = drawHeads();
     			pause(PAUSE_TIME / 2);
@@ -31,16 +31,14 @@ public class additional12seminari extends GraphicsProgram{
     	}
     }
     
-	private GOval drawCircle(int RED, int GREEN, int k) {
+	private GOval drawCircle(int k) {
 		GOval circle = new GOval(getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS, 2 * RADIUS, 2 * RADIUS);
 		circle.setFilled(true);
 		if(k == 0){
 			circle.setColor(Color.RED);
-			RED++;
 		}
 		else{
 			circle.setColor(Color.GREEN);
-			GREEN++;
 		}
 		add(circle);
 		return circle;
@@ -58,6 +56,5 @@ public class additional12seminari extends GraphicsProgram{
 		GLabel z = new GLabel("HEADS", x, y);
 		add(z);
 		return z;
-		
 	}
 }
