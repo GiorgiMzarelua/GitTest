@@ -40,13 +40,13 @@ public class additional12seminari extends GraphicsProgram{
 	}
 	private void drawTails() {
 		double x = getWidth() / 2 - 15;
-		double y = getHeight() / 2 - 1;
+		double y = getHeight() / 2;
 		add(new GLabel("TAILS", x, y));
 		
 	}
 	private void drawHeads() {
 		double x = getWidth() / 2 - 20;
-		double y = getHeight() / 2 - 5;
+		double y = getHeight() / 2;
 		add(new GLabel("HEADS", x, y));
 	}
 }
