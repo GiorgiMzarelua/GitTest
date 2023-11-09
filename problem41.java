@@ -17,6 +17,6 @@ public class problem41 extends GraphicsProgram{
 		circle.setFilled(true);
 		Color color = rgen.nextColor();
 		circle.setColor(color);
-		add(circle, e.getX(), e.getY());
+		add(circle, e.getX() - RADIUS, e.getY() - RADIUS);
 	}
 }
