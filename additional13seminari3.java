@@ -50,7 +50,7 @@ public class additional13seminari3 extends GraphicsProgram{
             	}
         	}
         	else{
-        		while(randomBall.getX() >= 0 && randomBall.getX() <= getWidth() - 2 * RADIUS  && randomBall.getY() >= 0 && randomBall.getY() <= getHeight() - 2 * RADIUS ) 
+        		while(randomBall.getX() > 0 && randomBall.getX() < getWidth() - 2 * RADIUS  && randomBall.getY() > 0 && randomBall.getY() < getHeight() - 2 * RADIUS ) 
             	{
             		randomBall.move(a, b);
         			pause(PAUSE_TIME);
