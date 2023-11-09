@@ -14,9 +14,11 @@ public class additional12seminari extends GraphicsProgram{
     	int GREEN = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		GOval ball = drawCircle(RED, GREEN);
+    		remove(ball);
     		pause(PAUSE_TIME);
     	}
     }
+    
 	private GOval drawCircle(int RED, int GREEN) {
 		GOval circle = new GOval(getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS, 2 * RADIUS, 2 * RADIUS);
 		int k = rgen.nextInt(0, 1);
