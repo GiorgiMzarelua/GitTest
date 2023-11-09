@@ -15,7 +15,7 @@ public class additional12seminari extends GraphicsProgram{
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		int k = rgen.nextInt(0, 1);
     		GLabel HT = drawTails();
-    		HT = drawHeads();
+    		GLabel HT1 = drawHeads();
     		GOval ball = drawCircle(k);
     		if(k == 0){
     			RED++;
