@@ -21,13 +21,17 @@ public class additional12seminari extends GraphicsProgram{
 		circle.setFilled(true);
 		if(k == 0){
 			circle.setColor(Color.RED);
-			drawHeads();
 		}
 		else{
 			circle.setColor(Color.GREEN);
-			drawTails();
 		}
 		add(circle);
+		if(k == 0){
+			drawHeads();
+		}
+		else{
+			drawTails();
+		}
 		return circle;
 	}
 	private void drawTails() {
