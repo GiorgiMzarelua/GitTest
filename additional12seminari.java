@@ -22,7 +22,6 @@ public class additional12seminari extends GraphicsProgram{
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
-        		remove(numOfReds);
     		}
     		else{
     			GREEN++;
@@ -31,7 +30,6 @@ public class additional12seminari extends GraphicsProgram{
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
-        		remove(numOfGreens);
     		}
     		pause(PAUSE_TIME / 2);
     	}
@@ -40,7 +38,7 @@ public class additional12seminari extends GraphicsProgram{
 	private GLabel drawGreenNumber(int GREEN) {
 		double x = getWidth() - 150;
 		double y = 35;
-		GLabel z = new GLabel("Number of heads: " + GREEN, x, y);
+		GLabel z = new GLabel("Number of heads: ", x, y);
 		add(z);
 		return z;
 	}
@@ -48,7 +46,7 @@ public class additional12seminari extends GraphicsProgram{
 	private GLabel drawRedNumber(int RED) {
 		double x = getWidth() - 150;
 		double y = 25;
-		GLabel z = new GLabel("Number of heads: " + RED, x, y);
+		GLabel z = new GLabel("Number of heads: ", x, y);
 		add(z);
 		return z;
 
