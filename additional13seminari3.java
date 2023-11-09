@@ -21,28 +21,28 @@ public class additional13seminari3 extends GraphicsProgram{
         	b = -b;
         }
         while(true){
-        	if(randomBall.getX() == 0){
+        	if(randomBall.getX() <= a){
         		while(randomBall.getX() != 0 && randomBall.getX() != getWidth() - 2 * RADIUS && randomBall.getY() != 0 && randomBall.getY() != getHeight() - 2* RADIUS) 
             	{
             		randomBall.move(-a, b);
         			pause(PAUSE_TIME);
             	}
         	}
-        	if(randomBall.getY() == 0){
+        	if(randomBall.getY() <= b){
         		while(randomBall.getX() != 0 && randomBall.getX() != getWidth() - 2 * RADIUS && randomBall.getY() != 0 && randomBall.getY() != getHeight() - 2* RADIUS) 
             	{
             		randomBall.move(a, -b);
         			pause(PAUSE_TIME);
             	}
         	}
-        	if(randomBall.getX() == getWidth() - 2 * RADIUS){
+        	if(randomBall.getX() >= getWidth() - 2 * RADIUS){
         		while(randomBall.getX() != 0 && randomBall.getX() != getWidth() - 2 * RADIUS && randomBall.getY() != 0 && randomBall.getY() != getHeight() - 2* RADIUS) 
             	{
             		randomBall.move(-a, b);
         			pause(PAUSE_TIME);
             	}
         	}
-        	if(randomBall.getY() == getHeight() - 2 * RADIUS){
+        	if(randomBall.getY() >= getHeight() - 2 * RADIUS){
         		while(randomBall.getX() != 0 && randomBall.getX() != getWidth() - 2 * RADIUS && randomBall.getY() != 0 && randomBall.getY() != getHeight() - 2* RADIUS) 
             	{
             		randomBall.move(a, -b);
