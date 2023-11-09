@@ -40,7 +40,7 @@ public class additional12seminari extends GraphicsProgram{
     }
     
 	private GLabel howManyTails(int GREEN) {
-		double x = getWidth() - 10;
+		double x = getWidth() - 50;
 		double y = 35;
 		GLabel z = new GLabel("" + GREEN, x, y);
 		add(z);
@@ -48,7 +48,7 @@ public class additional12seminari extends GraphicsProgram{
 	}
 
 	private GLabel howManyHeads(int RED) {
-		double x = getWidth() - 10;
+		double x = getWidth() - 70;
 		double y = 25;
 		GLabel z = new GLabel("" + RED, x, y);
 		add(z);
