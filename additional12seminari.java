@@ -14,28 +14,48 @@ public class additional12seminari extends GraphicsProgram{
     	int GREEN = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		int k = rgen.nextInt(0, 1);
-    		GLabel numOfReds = drawRedNumber(RED);
-    		GLabel numOfGreens = drawGreenNumber(GREEN);
+    		GLabel numOfReds = drawRedNumber();
+    		GLabel numOfGreens = drawGreenNumber();
     		GOval ball = drawCircle(k);
     		if(k == 0){
     			RED++;
     			GLabel HT = drawHeads();
+    			GLabel red = howManyHeads(RED);
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
+        		remove(red);
     		}
     		else{
     			GREEN++;
     			GLabel HT = drawTails();
+    			GLabel green = howManyTails(GREEN);
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
+        		remove(green);
     		}
     		pause(PAUSE_TIME / 2);
     	}
     }
     
-	private GLabel drawGreenNumber(int GREEN) {
+	private GLabel howManyTails(int GREEN) {
+		double x = getWidth() - 10;
+		double y = 35;
+		GLabel z = new GLabel("" + GREEN, x, y);
+		add(z);
+		return z;	
+	}
+
+	private GLabel howManyHeads(int RED) {
+		double x = getWidth() - 10;
+		double y = 25;
+		GLabel z = new GLabel("" + RED, x, y);
+		add(z);
+		return z;
+	}
+
+	private GLabel drawGreenNumber() {
 		double x = getWidth() - 150;
 		double y = 35;
 		GLabel z = new GLabel("Number of tails: ", x, y);
@@ -43,7 +63,7 @@ public class additional12seminari extends GraphicsProgram{
 		return z;
 	}
 
-	private GLabel drawRedNumber(int RED) {
+	private GLabel drawRedNumber() {
 		double x = getWidth() - 150;
 		double y = 25;
 		GLabel z = new GLabel("Number of heads: ", x, y);
