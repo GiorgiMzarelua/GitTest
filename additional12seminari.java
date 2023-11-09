@@ -1,4 +1,44 @@
+import java.awt.Color;
 
-public class additional12seminari {
-
+import acm.graphics.GLabel;
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
+public class additional12seminari extends GraphicsProgram{
+	private static final int RADIUS = 50;
+	private static final int NUM_EXPERIMENTS = 10;
+	private static final int PAUSE_TIME = 1000;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+    public void run(){
+    	for(int i = 0; i < NUM_EXPERIMENTS; i++){
+    		GOval ball = drawCircle();
+    		pause(PAUSE_TIME);
+    	}
+    }
+	private GOval drawCircle() {
+		GOval circle = new GOval(getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS, 2 * RADIUS, 2 * RADIUS);
+		int k = rgen.nextInt(0, 1);
+		circle.setFilled(true);
+		if(k == 0){
+			circle.setColor(Color.RED);
+			drawHeads();
+		}
+		else{
+			circle.setColor(Color.GREEN);
+			drawTails();
+		}
+		add(circle);
+		return circle;
+	}
+	private void drawTails() {
+		double x = getWidth() / 2 - 20;
+		double y = getHeight() / 2 - 5;
+		add(new GLabel("TAILS", x, y));
+		
+	}
+	private void drawHeads() {
+		double x = getWidth() / 2 - 20;
+		double y = getHeight() / 2 - 5;
+		add(new GLabel("HEADS", x, y));
+	}
 }
