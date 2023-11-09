@@ -21,21 +21,20 @@ public class additional12seminari extends GraphicsProgram{
     			RED++;
     			GLabel HT = drawHeads();
     			GLabel red = howManyHeads(RED);
-    			pause(PAUSE_TIME / 2);
+    			pause(PAUSE_TIME);
         		remove(ball);
         		remove(HT);
-        		remove(red);
     		}
     		else{
     			GREEN++;
     			GLabel HT = drawTails();
     			GLabel green = howManyTails(GREEN);
-    			pause(PAUSE_TIME / 2);
+    			pause(PAUSE_TIME);
         		remove(ball);
         		remove(HT);
         		remove(green);
     		}
-    		pause(PAUSE_TIME / 2);
+    		pause(PAUSE_TIME);
     	}
     }
     
