@@ -17,24 +17,31 @@ public class additional12seminari extends GraphicsProgram{
     		GLabel numOfReds = drawRedNumber();
     		GLabel numOfGreens = drawGreenNumber();
     		GOval ball = drawCircle(k);
+    		GLabel red = howManyHeads(RED);
+    		GLabel green = howManyTails(GREEN);
     		if(k == 0){
     			RED++;
     			GLabel HT = drawHeads();
-    			GLabel red = howManyHeads(RED);
     			pause(PAUSE_TIME);
         		remove(ball);
         		remove(HT);
+        		remove(red);
     		}
     		else{
     			GREEN++;
     			GLabel HT = drawTails();
-    			GLabel green = howManyTails(GREEN);
     			pause(PAUSE_TIME);
         		remove(ball);
         		remove(HT);
         		remove(green);
     		}
     		pause(PAUSE_TIME);
+    		if(k == 0){
+    			remove(red);
+    		}
+    		else{
+    			remove(green);
+    		}
     	}
     }
     
