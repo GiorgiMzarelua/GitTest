@@ -38,7 +38,7 @@ public class additional12seminari extends GraphicsProgram{
     }
     
 	private GLabel drawGreenNumber(int GREEN) {
-		double x = getWidth() - 100;
+		double x = getWidth() - 150;
 		double y = 35;
 		GLabel z = new GLabel("Number of heads: " + GREEN, x, y);
 		add(z);
@@ -46,7 +46,7 @@ public class additional12seminari extends GraphicsProgram{
 	}
 
 	private GLabel drawRedNumber(int RED) {
-		double x = getWidth() - 100;
+		double x = getWidth() - 150;
 		double y = 25;
 		GLabel z = new GLabel("Number of heads: " + RED, x, y);
 		add(z);
