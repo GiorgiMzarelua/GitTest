@@ -22,35 +22,35 @@ public class additional13seminari3 extends GraphicsProgram{
         }
         while(true){
         	if(randomBall.getX() <= a){
-        		while(randomBall.getX() >= a + 1 && randomBall.getX() <= getWidth() - 2 * RADIUS - b - 1 && randomBall.getY() >= a + 1 && randomBall.getY() <= getHeight() - 2 * RADIUS - b -1) 
-            	{
+        		while(randomBall.getX() >= a && randomBall.getX() <= getWidth() - 2 * RADIUS - b && randomBall.getY() >= a && randomBall.getY() <= getHeight() - 2 * RADIUS - b) 
+            	{ 
             		randomBall.move(-a, b);
         			pause(PAUSE_TIME);
             	}
         	}
         	if(randomBall.getY() <= b){
-        		while(randomBall.getX() >= a + 1 && randomBall.getX() <= getWidth() - 2 * RADIUS - b - 1 && randomBall.getY() >= a + 1 && randomBall.getY() <= getHeight() - 2 * RADIUS - b - 1) 
+        		while(randomBall.getX() >= a && randomBall.getX() <= getWidth() - 2 * RADIUS - b && randomBall.getY() >= a && randomBall.getY() <= getHeight() - 2 * RADIUS - b) 
             	{
             		randomBall.move(a, -b);
         			pause(PAUSE_TIME);
             	}
         	}
         	if(randomBall.getX() >= getWidth() - 2 * RADIUS){
-        		while(randomBall.getX() >= a + 1 && randomBall.getX() <= getWidth() - 2 * RADIUS - b - 1 && randomBall.getY() >= a + 1 && randomBall.getY() <= getHeight() - 2 * RADIUS - b - 1) 
+        		while(randomBall.getX() >= a && randomBall.getX() <= getWidth() - 2 * RADIUS - b && randomBall.getY() >= a && randomBall.getY() <= getHeight() - 2 * RADIUS - b) 
             	{
             		randomBall.move(-a, b);
         			pause(PAUSE_TIME);
             	}
         	}
         	if(randomBall.getY() >= getHeight() - 2 * RADIUS){
-        		while(randomBall.getX() >= a + 1 && randomBall.getX() <= getWidth() - 2 * RADIUS - b - 1 && randomBall.getY() >= a + 1&& randomBall.getY() <= getHeight() - 2 * RADIUS - b - 1) 
+        		while(randomBall.getX() >= a && randomBall.getX() <= getWidth() - 2 * RADIUS - b && randomBall.getY() >= a && randomBall.getY() <= getHeight() - 2 * RADIUS - b) 
             	{
             		randomBall.move(a, -b);
         			pause(PAUSE_TIME);
             	}
         	}
         	else{
-        		while(randomBall.getX() >= a + 1 && randomBall.getX() <= getWidth() - 2 * RADIUS - b - 1 && randomBall.getY() >= a + 1 && randomBall.getY() <= getHeight() - 2 * RADIUS - b - 1) 
+        		while(randomBall.getX() >= a && randomBall.getX() <= getWidth() - 2 * RADIUS - b && randomBall.getY() >= a && randomBall.getY() <= getHeight() - 2 * RADIUS - b) 
             	{
             		randomBall.move(a, b);
         			pause(PAUSE_TIME);
