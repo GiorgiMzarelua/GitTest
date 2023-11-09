@@ -8,7 +8,7 @@ public class problem42 extends GraphicsProgram{
     	addMouseListeners();
     }
     
-    public void mouseClicked(MouseEvent e){
+    public void mousePressed(MouseEvent e){
     	double x1 = e.getX();
     	double y1 = e.getY();
     	double x2 = e.getX();
@@ -16,4 +16,5 @@ public class problem42 extends GraphicsProgram{
         GLine line = new GLine(x1, y1, x2, y2);
         add(line);
     }
+    
 }
