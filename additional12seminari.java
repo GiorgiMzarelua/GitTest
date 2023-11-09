@@ -40,7 +40,7 @@ public class additional12seminari extends GraphicsProgram{
 	}
 	private void drawTails() {
 		double x = getWidth() / 2 - 15;
-		double y = getHeight() / 2 - 2;
+		double y = getHeight() / 2 - 1;
 		add(new GLabel("TAILS", x, y));
 		
 	}
