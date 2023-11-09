@@ -20,7 +20,7 @@ public class additional13seminari2 extends GraphicsProgram{
 						speed = speed + ACCELERATION;
 					}
 					else{
-						speed = getHeight() - circle.getY() - 2 * RADIUS;
+						speed = getHeight() - circle.getY() - 2 * RADIUS - 10;
 					}
 				}
 			}
