@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class additional13seminari2 extends GraphicsProgram{
 	private static final int RADIUS = 25;
-	private static final int PAUSE_TIME = 40;
+	private static final int PAUSE_TIME = 30;
 	private static final int ACCELERATION = 10;
 	private static final int SPEED_DECREASE = 15;
 	public void run(){
