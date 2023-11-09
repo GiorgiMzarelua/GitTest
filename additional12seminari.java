@@ -14,19 +14,19 @@ public class additional12seminari extends GraphicsProgram{
     	int GREEN = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		int k = rgen.nextInt(0, 1);
-    		GLabel HT = drawTails();
-    		GLabel HT1 = drawHeads();
+    		GLabel numOfReds = drawRedNumber(RED);
+    		GLabel numOfGreens = drawGreenNumber(GREEN);
     		GOval ball = drawCircle(k);
     		if(k == 0){
     			RED++;
-    			GLabel numOfReds = drawRedNumber(RED);
+    			GLabel HT = drawHeads();
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
     		}
     		else{
     			GREEN++;
-    			GLabel numOfGreens = drawGreenNumber(GREEN);
+    			GLabel HT = drawTails();
     			pause(PAUSE_TIME / 2);
         		remove(ball);
         		remove(HT);
