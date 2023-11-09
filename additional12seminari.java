@@ -14,8 +14,9 @@ public class additional12seminari extends GraphicsProgram{
     	int GREEN = 0;
     	for(int i = 0; i < NUM_EXPERIMENTS; i++){ 
     		GOval ball = drawCircle(RED, GREEN);
-    		pause(PAUSE_TIME);
+    		pause(PAUSE_TIME / 2);
     		remove(ball);
+    		pause(PAUSE_TIME / 2);
     	}
     }
     
