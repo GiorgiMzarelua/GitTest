@@ -46,14 +46,14 @@ public class additional12seminari extends GraphicsProgram{
 		return circle;
 	}
 	private GLabel drawTails() {
-		double x = getWidth() / 2 - 10;
+		double x = getWidth() / 2 - 15;
 		double y = getHeight() / 2;
 		GLabel z = new GLabel("TAILS", x, y);
 		add(z);
 		return z;
 	}
 	private GLabel drawHeads() {
-		double x = getWidth() / 2 - 10;
+		double x = getWidth() / 2 - 15;
 		double y = getHeight() / 2;
 		GLabel z = new GLabel("HEADS", x, y);
 		add(z);
