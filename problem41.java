@@ -12,7 +12,7 @@ public class problem41 extends GraphicsProgram{
 		addMouseListeners();
 		
 	}
-	public void mousePressed(MouseEvent e){
+	public void mouseDragged(MouseEvent e){
 		addBrush(e.getX(), e.getY());
 	}
 	private void addBrush(int centerX, int centerY) {
