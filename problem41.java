@@ -12,7 +12,7 @@ public class problem41 extends GraphicsProgram{
 		addMouseListeners();
 		
 	}
-	public void mouseClicked(MouseEvent e){
+	public void mousePressed(MouseEvent e){
 		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
 		circle.setFilled(true);
 		Color color = rgen.nextColor();
