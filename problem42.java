@@ -8,7 +8,7 @@ public class problem42 extends GraphicsProgram{
     	addMouseListeners();
     }
     
-    public void mousePressed(MouseEvent e){
+    public void mouseDragged(MouseEvent e){
     	double x1 = e.getX();
     	double y1 = e.getY();
     	double x2 = e.getX();
