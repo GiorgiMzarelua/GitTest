@@ -11,7 +11,9 @@ public class problem43 extends GraphicsProgram{
 	private int prevX;
 	private int prevY;
     public void run(){
-    	addCircle();
+		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
+		circle.setFilled(true);
+		add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
     	addMouseListeners();
     }
 	private void addCircle() {
