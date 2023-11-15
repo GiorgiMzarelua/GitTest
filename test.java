@@ -82,7 +82,7 @@ public class test extends GraphicsProgram {
 	private void drawPaddle() {
 		PADDLE.setFilled(true);
 		PADDLE.setColor(Color.BLACK);
-		add(PADDLE, APPLICATION_WIDTH / 2 - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_Y_OFFSET - PADDLE_HEIGHT);	
+		add(PADDLE, APPLICATION_WIDTH / 2 - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_Y_OFFSET - PADDLE_HEIGHT);		
 	}
 
 	private void drawColumns(int i) {
@@ -109,20 +109,53 @@ public class test extends GraphicsProgram {
 	}
 
 	private void playGame() {
+		ballFalling();
+	    int nBricks = 100;
+	    int nTurns = NTURNS;
         double vx = rgen.nextDouble(1.0, SPEED);
         double vy = -Math.sqrt(9 - vx * vx);
-        if (rgen.nextBoolean(0.5)) {
-            vy = -vy;
+        if(rgen.nextBoolean(0.5)){
+        	vy = -vy;
         }
-
-        while (true) {
-            moveBall(vx, vy);
-            checkCollisions(vx, vy);
-            pause(PAUSE_TIME);
-        }
+	    while(nBricks > 0 && nTurns > 0){
+			if(BALL.getX() <= 4){
+				vx = -vx;
+			}
+			if(BALL.getX() + 2 * BALL_RADIUS + vx >= getWidth()){
+				vx = -vx;
+			}
+			if(BALL.getY() <= 4){
+				vy= - vy;
+			}
+			if(BALL.getY() + 2 * BALL_RADIUS  + vy >= getHeight()){
+				ballFalling();
+				nTurns--;
+			}
+            GObject collider = getCollidingObject();
+            if(collider != null){
+            	vy = -vy;
+            }
+			if(collider != null && collider != PADDLE){
+				remove(getElementAt(BALL.getX(), BALL.getY()));
+				nBricks--;
+			}
+			if(BALL.getX() > vx && BALL.getX() + 2 * BALL_RADIUS + vx < getWidth() && BALL.getY() > vy && BALL.getY() + 2 * BALL_RADIUS + vy < getHeight()){
+				BALL.move(vx,  vy);
+				pause(PAUSE_TIME);
+			}
+	    }
     }
 
-    private void moveBall(double vx, double vy) {
+    private void ballFalling() {
+    	BALL.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+		while(getElementAt(BALL.getX(), BALL.getY()) == null && getElementAt(BALL.getX() + 2 * BALL_RADIUS, BALL.getY()) == null && getElementAt(BALL.getX() + 2 * BALL_RADIUS, BALL.getY() + 2 * BALL_RADIUS) == null && getElementAt(BALL.getX(), BALL.getY() + 2 * BALL_RADIUS) == null){
+			BALL.move(0,SPEED);
+			pause(PAUSE_TIME);
+		}
+		
+	}
+
+	private void moveBall(double vx, double vy) {
         BALL.move(vx, vy);
     }
 
