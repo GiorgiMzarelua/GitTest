@@ -12,7 +12,6 @@ public class problem44 extends GraphicsProgram{
     public void run(){
     	circle = new GOval(2 * RADIUS, 2 * RADIUS);
     	circle.setFilled(true);
-    	add(circle);
     	addMouseListeners();
     	while(true){
     		circle.move(0, SPEED);
