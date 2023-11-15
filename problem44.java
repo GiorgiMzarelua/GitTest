@@ -10,9 +10,9 @@ public class problem44 extends GraphicsProgram{
 	private static final int DELAY = 20;
 	private GOval circle;
     public void run(){
+    	addMouseListeners();
     	circle = new GOval(2 * RADIUS, 2 * RADIUS);
     	circle.setFilled(true);
-    	addMouseListeners();
     	while(true){
     		circle.move(0, SPEED);
     		pause(DELAY);
