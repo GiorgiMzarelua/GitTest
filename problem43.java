@@ -24,16 +24,16 @@ public class problem43 extends GraphicsProgram{
 	}
 	
 	public void MousePressed(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), getY());
+		GObject obj = getElementAt(e.getX(), e.getY());
 		lastPressedObj = obj;
-		if(obj != null){
+		if(obj != null) {
 			prevX = e.getX();
 			prevY = e.getY();
 		}
 	}
 	
 	public void MouseDragged(MouseEvent e){
-		if(lastPressedObj != null){
+		if(lastPressedObj != null) {
 			lastPressedObj.move(e.getX() - prevX, e.getY() - prevY);
 			prevX = e.getX();
 			prevY = e.getY();
