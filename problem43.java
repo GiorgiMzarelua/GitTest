@@ -11,18 +11,13 @@ public class problem43 extends GraphicsProgram{
 	private int prevX;
 	private int prevY;
     public void run(){
-		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
-		circle.setFilled(true);
-		add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
+    	addCircle();
     	addMouseListeners();
     }
 	private void addCircle() {
 		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
-		int x = getWidth() / 2 - RADIUS;
-		int y = getHeight() / 2 - RADIUS;
 		circle.setFilled(true);
-		circle.setColor(Color.BLACK);
-		add(circle, x, y);
+		add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
 	}
 	
 	public void MousePressed(MouseEvent e){
