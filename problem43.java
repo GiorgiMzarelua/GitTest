@@ -23,7 +23,7 @@ public class problem43 extends GraphicsProgram{
 		add(circle, x, y);
 	}
 	
-	public void MousePressed(MouseEvent e){
+	public void mousePressed(MouseEvent e){
 		GObject obj = getElementAt(e.getX(), e.getY());
 		lastPressedObj = obj;
 		if(obj != null) {
@@ -32,7 +32,7 @@ public class problem43 extends GraphicsProgram{
 		}
 	}
 	
-	public void MouseDragged(MouseEvent e){
+	public void mouseDragged(MouseEvent e){
 		if(lastPressedObj != null) {
 			lastPressedObj.move(e.getX() - prevX, e.getY() - prevY);
 			prevX = e.getX();
