@@ -9,7 +9,7 @@ public class semina16ri1 extends ConsoleProgram{
 		}
 		else{
 			int n = s1.length();
-			int counter1 = 0;
+			int counter1 = 1;
 			int counter2 = 0;
 			for(int i = 0; i < n; i++){
 				for(int j = i + 1; j< n; j++){
@@ -25,7 +25,7 @@ public class semina16ri1 extends ConsoleProgram{
 						print("FALSE");
 						break;
 					}
-					counter1 = 0;
+					counter1 = 1;
 					counter2 = 0;
 				}
 			}
