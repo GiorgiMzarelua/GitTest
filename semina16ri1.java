@@ -21,13 +21,16 @@ public class semina16ri1 extends ConsoleProgram{
 					if(s1.charAt(i) == s2.charAt(j)){
 						counter2++;
 					}
-					if(counter1 != counter2){
-						print("FALSE");
-						break;
-					}
+				}
+				if(counter1 != counter2){
+					print("FALSE");
+					break;
+				}
+				else{
 					counter1 = 1;
 					counter2 = 0;
 				}
+				
 			}
 			print("TRUE");
 		}
