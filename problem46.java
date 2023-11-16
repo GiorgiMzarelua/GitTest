@@ -9,7 +9,7 @@ public class problem46 extends ConsoleProgram{
     	int ans = 0;
     	for(int i = 0; i < n; i++){
     		c = s.charAt(i);
-    	    for(int j = i; j < n; j++){
+    	    for(int j = i + 1; j < n; j++){
     	    	if(c == s.charAt(j)){
     	    		counter++;
     	    	}
