@@ -32,7 +32,9 @@ public class semina16ri1 extends ConsoleProgram{
 				}
 				
 			}
-			print("TRUE");
+			if(counter1 == 1 && counter2 == 0){
+				print("TRUE");
+			}
 		}
 	}
 }
