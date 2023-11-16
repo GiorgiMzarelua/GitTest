@@ -18,8 +18,8 @@ public class problem44 extends GraphicsProgram{
     		pause(DELAY);
     	}
     }
-    
-    public void MouseClicked(MouseEvent e){
+    @Override
+    public void mouseClicked(MouseEvent e){
     	add(circle, e.getX() - RADIUS, e.getY() - RADIUS);
     }
 }
