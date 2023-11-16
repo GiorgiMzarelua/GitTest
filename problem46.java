@@ -19,6 +19,6 @@ public class problem46 extends ConsoleProgram{
     	    	counter = 1;
     	    }
     	}
-    	print(ans);
+    	print(ans);H
     }
 }
