@@ -27,12 +27,12 @@ public class semina16ri1 extends ConsoleProgram{
 					break;
 				}
 				else{
-					counter1 = 1;
+					counter1 = 0;
 					counter2 = 0;
 				}
 				
 			}
-			if(counter1 == 1 && counter2 == 0){
+			if(counter1 == 0 && counter2 == 0){
 				print("TRUE");
 			}
 		}
