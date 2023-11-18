@@ -106,6 +106,9 @@ public class test extends GraphicsProgram {
             collider = getCollidingObject();
             if(collider != null && collider != PADDLE){
 				remove(getElementAt(BALL.getX(), BALL.getY()));
+				remove(getElementAt(BALL.getX(), BALL.getY() + 2 * BALL_RADIUS));
+				remove(getElementAt(BALL.getX() + 2 * BALL_RADIUS, BALL.getY()));
+				remove(getElementAt(BALL.getX() + 2 * BALL_RADIUS, BALL.getY() + 2 * BALL_RADIUS));
 				nBricks--;
 			}
             if(collider != null){
