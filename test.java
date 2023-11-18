@@ -87,16 +87,16 @@ public class test extends GraphicsProgram {
         }
 	    while(nBricks > 0 && nTurns > 0){
 			if(BALL.getX() <= -vx){
-				BALL.move(vx, vy);
 				vx = -vx;
+				BALL.move(vx, vy);
 			}
 			if(BALL.getX() + 2 * BALL_RADIUS + vx >= getWidth()){
-				BALL.move(vx, vy);
 				vx = -vx;
+				BALL.move(vx, vy);
 			}
 			if(BALL.getY() <= -vy){
-				BALL.move(vx, vy);
 				vy = - vy;
+				BALL.move(vx, vy);
 			}
 			if(BALL.getY() + 2 * BALL_RADIUS  + vy >= getHeight()){
 				ballFalling();
