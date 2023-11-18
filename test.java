@@ -79,6 +79,7 @@ public class test extends GraphicsProgram {
 	    int nBricks = 100;
 	    int nTurns = NTURNS;
 	    GObject collider = getCollidingObject();
+	    
 	    ballFalling();
         double vx = rgen.nextDouble(1.0, SPEED);
         double vy = -Math.sqrt(9 - vx * vx);
@@ -103,13 +104,13 @@ public class test extends GraphicsProgram {
 				nTurns--;
 			}
             collider = getCollidingObject();
-            if(collider != null){
-            	vy = -vy;
-            }
-			if(collider != null && collider != PADDLE){
+            if(collider != null && collider != PADDLE){
 				remove(getElementAt(BALL.getX(), BALL.getY()));
 				nBricks--;
 			}
+            if(collider != null){
+            	vy = -vy;
+            }
 			if(BALL.getX() > vx && BALL.getX() + 2 * BALL_RADIUS + vx < getWidth() && BALL.getY() > vy && BALL.getY() + 2 * BALL_RADIUS + vy < getHeight()){
 				BALL.move(vx,  vy);
 				pause(PAUSE_TIME);
