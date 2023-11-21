@@ -5,7 +5,8 @@ public class problem49 extends ConsoleProgram{
     	String s = readLine("Enter the text: ");
     	int ans = 0;
     	for(int i = s.length() - 1; i >= 0; i--){
-    		ans = ans + (int)(Math.pow(10, i) *((int)s.charAt(s.length() - i - 1)) - 48);  
+    		int k = (int)(Math.pow(10, i));
+    		ans = ans + k *((int)s.charAt(s.length() - i - 1) - 48);  
     	}
     	print(ans);
     }
