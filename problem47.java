@@ -4,7 +4,7 @@ public class problem47 extends ConsoleProgram{
     public void run(){
     	String s = readLine("Enter a String: ");
     	boolean isPalindrom = isPalindrom(s);
-    	println(s + "is palindrome: " + isPalindrom);
+    	println(s + " is palindrome: " + isPalindrom);
     }
 
 	private boolean isPalindrom(String s) {
