@@ -12,7 +12,8 @@ public class problem51 extends ConsoleProgram{
     	String result = "";
     	for(int i = 0; i < s.length(); i ++){
     		char ch = s.charAt(i);
-    		if(s.indexOf(ch) == i){
+//    		if(s.indexOf(ch) == i)
+    		if(result.contains("" + ch)){
     			result += ch;
     		}
     	}
