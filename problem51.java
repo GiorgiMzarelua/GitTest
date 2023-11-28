@@ -13,7 +13,7 @@ public class problem51 extends ConsoleProgram{
     	for(int i = 0; i < s.length(); i ++){
     		char ch = s.charAt(i);
 //    		if(s.indexOf(ch) == i)
-    		if(result.contains("" + ch)){
+    		if(result.indexOf(ch) == -1){
     			result += ch;
     		}
     	}
