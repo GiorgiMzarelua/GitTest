@@ -7,7 +7,7 @@ import acm.util.RandomGenerator;
 
 public class cimcima extends GraphicsProgram{
 	private static final int CIRCLE_D = 40;
-	private static final int DELAY = 1;
+	private static final int DELAY = 100;
 	RandomGenerator rgen = RandomGenerator.getInstance();
     public void run(){
     	addMouseListeners();
@@ -32,10 +32,10 @@ public class cimcima extends GraphicsProgram{
 	private Color getColor() {
 		int test = rgen.nextInt(1,5);
 		Color color = null;
-		if(test == 2){
+		if(test == 1){
 			color = Color.GREEN;
 		}
-		if(test == 1){
+		if(test == 2){
 			color = Color.RED;
 		}
 		if(test == 3){
