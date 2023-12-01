@@ -31,6 +31,13 @@ public class shualedur22i2 extends GraphicsProgram{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e){
-	    
+	    if(getElementAt(e.getX(), e.getY()) != null){
+	    	if(getElementAt(e.getX(), e.getY()).getColor() == Color.WHITE){
+	    		getElementAt(e.getX(), e.getY()).setColor(Color.BLACK);
+	    	}
+	    	if(getElementAt(e.getX(), e.getY()).getColor() == Color.BLACK){
+	    		getElementAt(e.getX(), e.getY()).setColor(Color.WHITE);
+	    	}
+	    }
 	}
 }
