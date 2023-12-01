@@ -18,11 +18,12 @@ public class shualedur21i2 extends ConsoleProgram{
 					for(int f = k; f < m; f++){
 						if(lukeDna.substring(i, j) == anakineDna.subSequence(k, f) && anakineDna.subSequence(k, f).length() > m / 2){
 							ans = lukeDna.substring(i, j);
+							return ans;
 						}
 					}
 				}
 			}
 		}
-		return ans;
+		return null;
 	}
 }	
