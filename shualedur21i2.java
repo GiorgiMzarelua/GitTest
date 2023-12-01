@@ -13,9 +13,9 @@ public class shualedur21i2 extends ConsoleProgram{
 		int m = anakineDna.length();
 		String ans = null;
 		for(int i  = 0; i < n; i++){
-			for(int j = i; j < n; j++){
+			for(int j = i + 1; j < n; j++){
 				for(int k = 0; k < m; k++){
-					for(int f = k; f < m; f++){
+					for(int f = k + 1; f < m; f++){
 						if(lukeDna.substring(i, j) == anakineDna.subSequence(k, f) && anakineDna.subSequence(k, f).length() > ans.length()){
 							ans = lukeDna.substring(i, j);
 						}
