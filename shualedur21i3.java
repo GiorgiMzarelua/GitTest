@@ -9,11 +9,9 @@ public class shualedur21i3 extends GraphicsProgram{
     }
     @Override
 	public void mouseClicked(MouseEvent e){
-    	int x = 0;
-    	int y = 0;
+    	int x = e.getX();
+    	int y = e.getY();
     	GLine line = new GLine(x, y, e.getX(), e.getY());
-    	x = e.getX();
-    	y = e.getY();
     	add(line);
     }
 }
