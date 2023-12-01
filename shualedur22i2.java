@@ -14,7 +14,7 @@ public class shualedur22i2 extends GraphicsProgram{
 
 	private void drawALine(int i) {
 		for(int j = 0; j < 8; j++){
-			GRect rect = new GRect(j * getWidth() / 8, i * getWidth() / 8, getWidth() / 8, getWidth() / 8);
+			GRect rect = new GRect(j * getHeight() / 8, i * getHeight() / 8, getHeight() / 8, getHeight() / 8);
             add(rect);
 		}
 	}
