@@ -32,10 +32,10 @@ public class cimcima extends GraphicsProgram{
 	private Color getColor() {
 		int test = rgen.nextInt(1,5);
 		Color color = null;
-		if(test == 1){
+		if(test == 2){
 			color = Color.GREEN;
 		}
-		if(test == 2){
+		if(test == 1){
 			color = Color.RED;
 		}
 		if(test == 3){
