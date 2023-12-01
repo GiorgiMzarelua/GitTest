@@ -4,32 +4,25 @@ public class shualedur21i2 extends ConsoleProgram{
     public void run(){
     	String lukeDna = readLine("Enter Luke's DNA: ");
     	String anakineDna = readLine("Enter Anakine's DNA: ");
-    	boolean isFather = amIYourFatherLuke(lukeDna, anakineDna);
+    	String isFather = amIYourFatherLuke(lukeDna, anakineDna);
     	print(isFather);
     }
 
-	private boolean amIYourFatherLuke(String lukeDna, String anakineDna) {
-		int n1 = lukeDna.length();
-		int n2 = anakineDna.length();
-		int counter = 0;
-		while(true){
-			for(int i = 0; i < n2; i++){
-				for(int j = 0; j < n1; j++){
-					if(anakineDna.charAt(i) == lukeDna.charAt(j)){
-						while(anakineDna.charAt(i + counter) == lukeDna.charAt(j + counter)){
-							counter++;	
-						}
-						if(counter > n2 / 2){
-							return true;
-						}
-						else{
-							counter = 0;
+	private String amIYourFatherLuke(String lukeDna, String anakineDna) {
+		int n = lukeDna.length();
+		int m = anakineDna.length();
+		String ans = null;
+		for(int i  = 0; i < n; i++){
+			for(int j = i; j < n; j++){
+				for(int k = 0; k < m; k++){
+					for(int f = k; f < m; f++){
+						if(lukeDna.substring(i, j) == anakineDna.subSequence(k, f) && anakineDna.subSequence(k, f).length() > m / 2){
+							ans = lukeDna.substring(i, j);
 						}
 					}
 				}
 			}
-			return false;
 		}
-		
+		return ans;
 	}
-}
+}	
