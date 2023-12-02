@@ -11,7 +11,6 @@ public class shualedur21i2 extends ConsoleProgram{
     private boolean amIYourFatherLuke(String lukeDna, String anakineDna){
 		int maxLength = 0;
 		for(int i = 0; i < lukeDna.length(); i++){
-			//!! to include substring at the end =>  j < lukeDNA.length() + 1
 			for(int j = i + 1; j < lukeDna.length() + 1; j++){
 				String currSubs = lukeDna.substring(i, j);
 				if(anakineDna.indexOf(currSubs) == -1){
@@ -24,15 +23,3 @@ public class shualedur21i2 extends ConsoleProgram{
 	}
 }    
 
-//	private String amIYourFatherLuke(String lukeDna, String anakineDna) {
-//		int n = lukeDna.length();
-//		int m = anakineDna.length();
-//		String ans = null;
-//		for(int i  = 0; i < n; i++){
-//			for(int j = i + 1; j < n + 1; j++){
-//				
-//			}
-//		}
-//		return ans;
-//	}
-//}	
