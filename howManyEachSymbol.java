@@ -21,10 +21,10 @@ public class howManyEachSymbol extends ConsoleProgram{
 			for(int j = 0; j < s.length(); j++){
 				if(s.charAt(i) == s.charAt(j)){
 					counter++;
-					if(counter != mainCounter){
-						return false;
-					}
 				}
+			}
+			if(counter != mainCounter){
+				return false;
 			}
 			counter = 0;
 		}
