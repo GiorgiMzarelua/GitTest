@@ -13,7 +13,7 @@ public class shualedur21i3 extends GraphicsProgram{
     	POINT = new GPoint(0,0);
     }
     @Override
-	public void mouseClicked(MouseEvent e){
+	public void mousePressed(MouseEvent e){
     	LINE= new GLine(POINT.getX(), POINT.getY(),
 				e.getX(), e.getY());
 		add(LINE);
