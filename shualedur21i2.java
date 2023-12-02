@@ -21,5 +21,4 @@ public class shualedur21i2 extends ConsoleProgram{
 		}
 		return maxLength > anakineDna.length() / 2.0;
 	}
-}    
-
+}  
