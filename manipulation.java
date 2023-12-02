@@ -1,4 +1,5 @@
+import acm.program.ConsoleProgram;
 
-public class manipulation {
+public class manipulation extends ConsoleProgram{
 
 }
