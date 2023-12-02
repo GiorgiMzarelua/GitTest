@@ -9,6 +9,8 @@ import acm.program.GraphicsProgram;
 public class shualedur22i2 extends GraphicsProgram{
 	private static final int COLUMNS = 8;
 	private static final int ROWS = 8;
+	private GRect firstBlack = null;
+	private GRect secondBlack = null;
     public void run(){
     	addMouseListeners();
     	drawGrid();
@@ -31,13 +33,6 @@ public class shualedur22i2 extends GraphicsProgram{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e){
-	    if(getElementAt(e.getX(), e.getY()) != null){
-	    	if(((GRect) getElementAt(e.getX(), e.getY())).getFillColor() == Color.WHITE){
-	    		((GRect) getElementAt(e.getX(), e.getY())).setFillColor(Color.BLACK);
-	    	}
-	    	if(((GRect) getElementAt(e.getX(), e.getY())).getFillColor() == Color.BLACK){
-	    		((GRect) getElementAt(e.getX(), e.getY())).setFillColor(Color.WHITE);
-	    	}
-	    }
+	   
 	}
 }
