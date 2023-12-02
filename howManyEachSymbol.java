@@ -5,19 +5,29 @@ public class howManyEachSymbol extends ConsoleProgram{
 	
     public void run(){
     	String s =readLine("Enter the text: ");
-        int isBalanced = isBalanced(s);
+        boolean isBalanced = isBalanced(s);
         println(isBalanced);
     }
 
-	private int isBalanced(String s) {
+	private boolean isBalanced(String s) {
+		int mainCounter = 0;
 		int counter = 0;
 		for(int i = 0; i < s.length(); i++){
-			for(int j = i; j < s.length(); j++){
-				if(s.charAt(i) == s.charAt(j)){
-					counter++;
-				}
+			if(s.charAt(0) == s.charAt(i)){
+				mainCounter++;
 			}
 		}
-		return counter;
+		for(int i = 0; i < s.length(); i++){
+			for(int j = 0; j < s.length(); j++){
+				if(s.charAt(i) == s.charAt(j)){
+					counter++;
+					if(counter != mainCounter){
+						return false;
+					}
+				}
+			}
+			counter = 0;
+		}
+		return true;
 	}
 }
