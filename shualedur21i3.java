@@ -6,8 +6,8 @@ import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
 
 public class shualedur21i3 extends GraphicsProgram{
-	private GPoint POINT;
-	private GLine LINE;
+	private GPoint POINT = null;
+	private GLine LINE = null;
     public void run(){
     	addMouseListeners();
     	POINT = new GPoint(0,0);
