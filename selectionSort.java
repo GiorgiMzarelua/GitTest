@@ -25,7 +25,7 @@ public class selectionSort extends ConsoleProgram{
     	println(Arrays.toString(array));
     }
 
-	private void swap(int[] array, int i, int k) {
+	private void swap(int[] array, int i, int j) {
 		int m = array[i];
 		array[i] = array[j];
 		array[j] = m;
