@@ -19,5 +19,6 @@ public class selectionSort extends ConsoleProgram{
     			}
     		}
     	}
+    	println(array.toString());
     }
 }
