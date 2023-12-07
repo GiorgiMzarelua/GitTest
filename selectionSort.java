@@ -14,13 +14,17 @@ public class selectionSort extends ConsoleProgram{
     	for(int i = 0; i < n; i++){
     		for(int j = i; j < n; j ++){
     			if(array[j] < minimum){
-    				int k = array[j];
-    				array[j] = minimum;
-    				minimum = k;
-    				array[i] = minimum;
+    				minimum = array[j];
     			}
     		}
-    		minimum = array[n-1];
+    		int k = array[i];
+    		array[i] = minimum;
+    		for(int j = i; j < n; j++){
+    			if(array[j] == k){
+    				array[j] = k;
+    				break;
+    			}
+    		}
     	}
     	println(Arrays.toString(array));
     }
