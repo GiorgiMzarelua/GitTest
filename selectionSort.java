@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class selectionSort extends ConsoleProgram{
     public void run(){
     	int n = readInt("Enter the quantity of numbers: ");
-    	int[] array = new int[100];
+    	int[] array = new int[n];
     	int minimum = 0;
     	for(int i = 0; i < n; i++){
     		array[i] = readInt("Enter the " + i + "-th number of the list: ");
