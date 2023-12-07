@@ -20,7 +20,7 @@ public class selectionSort extends ConsoleProgram{
     				array[i] = minimum;
     			}
     		}
-    		minimum = array[j];
+    		minimum = array[n-1];
     	}
     	println(Arrays.toString(array));
     }
