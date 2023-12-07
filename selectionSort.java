@@ -25,6 +25,7 @@ public class selectionSort extends ConsoleProgram{
     				break;
     			}
     		}
+    		minimum = array[i + 1];
     	}
     	println(Arrays.toString(array));
     }
