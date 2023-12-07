@@ -10,8 +10,8 @@ public class selectionSort extends ConsoleProgram{
     	for(int i = 0; i < n; i++){
     		array[i] = readInt("Enter the " + i + "-th number of the list: ");
     	}
-    	minimum = array[0];
     	for(int i = 0; i < n; i++){
+    		minimum = array[i];
     		for(int j = i; j < n; j ++){
     			if(array[j] < minimum){
     				minimum = array[j];
@@ -25,7 +25,6 @@ public class selectionSort extends ConsoleProgram{
     				break;
     			}
     		}
-    		minimum = array[i + 1];
     	}
     	println(Arrays.toString(array));
     }
