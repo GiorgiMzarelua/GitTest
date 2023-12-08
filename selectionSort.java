@@ -29,7 +29,5 @@ public class selectionSort extends ConsoleProgram{
 		int m = array[i];
 		array[i] = array[j];
 		array[j] = m;
-	}
-
-	
+	}	
 }
