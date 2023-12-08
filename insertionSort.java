@@ -9,13 +9,20 @@ public class insertionSort extends ConsoleProgram{
         for(int i = 0; i < n; i++){
         	array[i] = readInt("Enter the " + (i + 1) + "-th number of the list: ");
         }
-        int key1 = array[0];
-        int key2 = array[0];
+        int key = array[0];
         for(int i = 0; i < n - 1; i++){
-        		key1 = Math.min(key2, array[i]);
-        		key2 = Math.max(key1, array[i]);
-        		array[i] = key1;                
+        	for(int j = i; j < n; j++){
+        		if(array[j] < key){
+        			swap(key, array[j]);
+        		}
+        	}
         }
         println(Arrays.toString(array));
     }
+
+	private void swap(int key, int i) {
+		int k = key;
+		key = i;
+		i = k;
+	}
 }
