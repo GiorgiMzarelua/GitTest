@@ -10,19 +10,18 @@ public class insertionSort extends ConsoleProgram{
         	array[i] = readInt("Enter the " + (i + 1) + "-th number of the list: ");
         }
         for(int i = 0; i < n; i++){
-        	int key = array[i];
         	for(int j = i; j < n; j++){
-        		if(array[j] < key){
-        			swap(array, key, j);
+        		if(array[j] < array[i]){
+        			swap(array, j, i);
         		}
         	}
         }
         println(Arrays.toString(array));
     }
 
-	private void swap(int[] array, int key, int j) {
-		int m = key;
-		key = array[j];
+	private void swap(int[] array, int j, int i) {
+		int m = array[i];
+		array[i] = array[j];
 		array[j] = m;
 	}
 }
