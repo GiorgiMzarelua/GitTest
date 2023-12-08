@@ -9,8 +9,8 @@ public class insertionSort extends ConsoleProgram{
         for(int i = 0; i < n; i++){
         	array[i] = readInt("Enter the " + (i + 1) + "-th number of the list: ");
         }
-        int key = array[0];
         for(int i = 0; i < n - 1; i++){
+        	int key = array[i];
         	for(int j = i; j < n; j++){
         		if(array[j] < key){
         			swap(key, array[j]);
