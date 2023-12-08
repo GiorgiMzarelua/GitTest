@@ -9,7 +9,7 @@ public class selectionSort extends ConsoleProgram{
     	int minimum = 0;
     	int k = 0;
     	for(int i = 0; i < n; i++){
-    		array[i] = readInt("Enter the " + i + "-th number of the list: ");
+    		array[i] = readInt("Enter the " + (i + 1) + "-th number of the list: ");
     	}
     	for(int i = 0; i < n; i++){
     		minimum = array[i];

@@ -7,7 +7,7 @@ public class bubleSort extends ConsoleProgram{
     	int n = readInt("Enter the quantity of numbers: ");
     	int[] array = new int[n];
     	for(int i = 0; i < n; i++){
-    		array[i] = readInt("Enter the " + i + "-th number of the list: ");
+    		array[i] = readInt("Enter the " + (i + 1) + "-th number of the list: ");
     	}
     	int k;
     	for(int i = 0; i < n; i++){
