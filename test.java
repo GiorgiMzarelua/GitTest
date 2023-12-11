@@ -5,3 +5,8 @@ public class test extends ConsoleProgram{
     	
     }
 }
+/*
+ *   extraversion
+ *   openness
+ *   Conscientiousness:
+ */
