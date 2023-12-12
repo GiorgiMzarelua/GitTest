@@ -24,8 +24,7 @@ public class problem57 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			array[(int) s2.charAt(i) - 'a']--;
 		}
-		println(Arrays.toString(array));
-		for(int i = 0; i < n; i++){
+		for(int i = 0; i < 26; i++){
 			if(array[i] != 0){
 				return false;
 			}
