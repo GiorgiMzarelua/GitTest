@@ -17,7 +17,7 @@ public class problem57 extends ConsoleProgram{
 
 	private boolean isAnagram(String s1, String s2) {
 		int n = s1.length();
-		int[] array = new int[n];
+		int[] array = new int[26];
 		for(int i = 0; i < n; i++){
 			array[(int) s1.charAt(i) - 'a']++;
 		}
