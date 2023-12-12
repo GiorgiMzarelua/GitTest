@@ -22,7 +22,7 @@ public class problem55 extends ConsoleProgram{
     			println("Not Sorted!");
     			break;
     		}
-    		if(i == n){
+    		if(i == n - 1){
     			println("Sorted!");
     			break;
     		}
