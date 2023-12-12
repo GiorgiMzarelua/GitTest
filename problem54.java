@@ -15,6 +15,14 @@ public class problem54 extends ConsoleProgram{
     			max = array[i];
     		}
     	}
+    	if(secondMax == max){
+    		secondMax = array[1];
+    		for(int i = 1; i < n; i++){
+    			if(secondMax < array[i]){
+    				secondMax = array[i];
+    			}
+    		}
+    	}
     	println("The second greatest number: " + secondMax);
     	println("The greatest number: " + max);
     }
