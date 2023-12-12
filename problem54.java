@@ -16,7 +16,7 @@ public class problem54 extends ConsoleProgram{
     		}
     	}
     	if(secondMax == max){
-    		secondMax = array[1];
+    		secondMax = -1424211;
     		for(int i = 1; i < n; i++){
     			if(secondMax < array[i]){
     				secondMax = array[i];
