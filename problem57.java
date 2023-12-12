@@ -17,10 +17,10 @@ public class problem57 extends ConsoleProgram{
 		int n = s1.length();
 		int[] array = new int[n];
 		for(int i = 0; i < n; i++){
-			array[(int) s1.charAt(i) - 97]++;
+			array[(int) s1.charAt(i) - 'a']++;
 		}
 		for(int i = 0; i < n; i++){
-			array[(int) s2.charAt(i) - 97]--;
+			array[(int) s2.charAt(i) - 'a']--;
 		}
 		for(int i = 0; i < n; i++){
 			if(array[i] != 0){
