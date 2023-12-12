@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class problem57 extends ConsoleProgram{
@@ -22,6 +24,7 @@ public class problem57 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			array[(int) s2.charAt(i) - 'a']--;
 		}
+		println(Arrays.toString(array));
 		for(int i = 0; i < n; i++){
 			if(array[i] != 0){
 				return false;
