@@ -13,14 +13,13 @@ public class problem58 extends ConsoleProgram{
     			array[i * n + j] = matrix[i][j];
     		}
     	}
-    	int k;
     	for(int i = 0; i < n; i++){
-    		for(int j = 0; j < n - 1; j++){
-    			k = Math.min(array[j], array[j + 1]);
-    			array[j + 1] = Math.max(array[j], array[j + 1]);
-    			array[j] = k;
-    		}
-    	}
+        	for(int j = i; j < n; j++){
+        		if(array[j] < array[i]){
+        			swap(array, j, i);
+        		}
+        	}
+        }
     	println(Arrays.toString(array));
     	for(int i = 1; i <= n * n; i++){
     		if(array[i] != i){
@@ -33,4 +32,10 @@ public class problem58 extends ConsoleProgram{
     		}
     	}
     }
+
+    private void swap(int[] array, int j, int i) {
+		int m = array[i];
+		array[i] = array[j];
+		array[j] = m;
+	}
 }
