@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class problem58 extends ConsoleProgram{
@@ -19,6 +21,7 @@ public class problem58 extends ConsoleProgram{
     			array[j] = k;
     		}
     	}
+    	println(Arrays.toString(array));
     	for(int i = 1; i <= n * n; i++){
     		if(array[i] != i){
     			println(false);
