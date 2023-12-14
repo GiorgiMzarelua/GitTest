@@ -22,7 +22,7 @@ public class problem58 extends ConsoleProgram{
     		}
     	}
     	for(int i = 1; i <= n * n; i++){
-    		if(array[i-1] != i){
+    		if(array[i - 1] != i){
     			println(false);
     			break;
     		}
