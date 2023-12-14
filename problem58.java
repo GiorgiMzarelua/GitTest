@@ -13,9 +13,16 @@ public class problem58 extends ConsoleProgram{
     			array[i * n + j] = matrix[i][j];
     		}
     	}
-    	
+    	int k;
+    	for(int i = 0; i < n; i++){
+    		for(int j = 0; j < n - 1; j++){
+    			k = Math.min(array[j], array[j + 1]);
+    			array[j + 1] = Math.max(array[j], array[j + 1]);
+    			array[j] = k;
+    		}
+    	}
     	for(int i = 1; i <= n * n; i++){
-    		if(array[i] != i){
+    		if(array[i-1] != i){
     			println(false);
     			break;
     		}
