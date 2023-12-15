@@ -16,11 +16,8 @@ public class problem59 extends ConsoleProgram{
     		for(int j = 0; j < m; j++){
     			for(int k = i ; k < n; k++){
     				for(int p = m; p < m; p++){
-    					if(matrix[k][p] == 1){
+    					while(matrix[k][p] == 1){
     						counter++;
-    					}
-    					else{
-    						break;
     					}
     				}
     			}
