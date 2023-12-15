@@ -19,6 +19,9 @@ public class problem59 extends ConsoleProgram{
     					if(matrix[k][p] == 1){
     						counter++;
     					}
+    					else{
+    						break;
+    					}
     				}
     			}
     			ans = Math.max(ans,  counter);
