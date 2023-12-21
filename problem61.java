@@ -18,10 +18,10 @@ public class problem61 extends ConsoleProgram{
     			if(array[i] + array[j] == m){
     				counter++;
     				mp.put(array[i], counter);
-    				println("The " + counter + " number is: " + mp.get(counter));
+    				println("The " + counter + "-th number is: " + mp.get(counter));
     				counter++;
     				mp.put(array[j], counter);
-    				println("The " + counter + " number is: " + mp.get(counter));
+    				println("The " + counter + "-th  number is: " + mp.get(counter));
     			}
     		}
     	}
