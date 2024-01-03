@@ -14,17 +14,19 @@ public class problem63 extends ConsoleProgram{
 	private static final String SENTINEL = "";
     public void run(){
     	Map<String, Integer> relationships = new HashMap<String,Integer>();
+    	int counter = 0;
     	while(true){
     		String S1 = readLine("Enter the person who knows the second person: ");
     		if(S1.equals(SENTINEL)) break;
     		String S2 = readLine("Enter the person who is known for the first one: ");
+    		counter++;
     		if(!relationships.containsKey(S1)){
     			relationships.put(S1, 0);
     		}
     		int newCount = relationships.get(S1) + 1;
 			relationships.put(S1, newCount);
     	}
-    	println(relationships.size());
+    	println(counter);
     	for(int i = 0; i < relationships.size(); i++){
     		int value = relationships.size();
     	}
