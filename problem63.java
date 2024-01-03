@@ -24,6 +24,9 @@ public class problem63 extends ConsoleProgram{
     		int newCount = relationships.get(S1) + 1;
 			relationships.put(S1, newCount);
     	}
-    	println(relationships);
+    	println(relationships.size());
+    	for(int i = 0; i < relationships.size(); i++){
+    		int value = relationships.size();
+    	}
     }
 }
