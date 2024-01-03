@@ -23,6 +23,10 @@ public class problem61 extends ConsoleProgram{
     			}
     		}
     	}
-    	println(findingCouple);
+    	for(int i = 0; i < findingCouple.size(); i++){
+    		int couple1 = findingCouple.get(i);
+    		int couple2 = m - couple1;
+    		println("the first number is " + couple1 + " and its partner is " + couple2);
+    	}
     }
 }
