@@ -10,8 +10,8 @@ public class problem62 extends ConsoleProgram{
 		while(true){
 			String name = readLine("Enter the name: ");
 			if(name.equals(SENTINEL))   break;
-			if(!namesCounter.containsKey(name)) namesCounter.put(name, 0);
-			int newCount = namesCounter.get(name) + 1;
+			if(!namesCounter.containsKey(name)) namesCounter.put(name, 1);
+			int newCount = namesCounter.get(name);
 			namesCounter.put(name, newCount);
 		}
 		println(namesCounter);
