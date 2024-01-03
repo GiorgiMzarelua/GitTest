@@ -14,23 +14,25 @@ public class problem63 extends ConsoleProgram{
 	private static final String SENTINEL = "";
     public void run(){
     	Map<String, Integer> relationships = new HashMap<String,Integer>();
-    	int size = 0;
     	while(true){
     		String S1 = readLine("Enter the person who knows the second person: ");
     		if(S1.equals(SENTINEL)) break;
     		String S2 = readLine("Enter the person who is known for the first one: ");
-    		size++;
     		if(!relationships.containsKey(S1)){
     			relationships.put(S1, 0);
     		}
     		int newCount = relationships.get(S1) + 1;
 			relationships.put(S1, newCount);
     	}
-    	for(int i = size; i > 0; i--){
-    		if(relationships.containsValue(i)){
-    			println(i);
-    			break;
+    	int maxFriends = 0;
+    	String person = null;
+    	for(String S1: relationships.keySet()){
+    		int friendQuantity = relationships.get(S1);
+    		if(friendQuantity > maxFriends){
+    			maxFriends = friendQuantity;
+    			person = S1;
     		}
     	}
+    	println(person);
     }
 }
