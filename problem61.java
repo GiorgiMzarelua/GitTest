@@ -23,8 +23,11 @@ public class problem61 extends ConsoleProgram{
     			}
     		}
     	}
-    	for(int i = 0; i < findingCouple.size(); i++){
-    		int couple1 = findingCouple.get(i);
+    	for(int i = 0; i < n; i++){
+    		int couple1 = 0;
+    		if(findingCouple.containsKey(i)){
+    			couple1 = findingCouple.get(i);
+    		}
     		int couple2 = m - couple1;
     		println("the first number is " + couple1 + " and its partner is " + couple2);
     	}
