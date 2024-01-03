@@ -27,8 +27,8 @@ public class problem63 extends ConsoleProgram{
 			relationships.put(S1, newCount);
     	}
     	for(int i = size; i > 0; i--){
-    		if(relationships.containsValue(size)){
-    			println(size);
+    		if(relationships.containsValue(i)){
+    			println(i);
     			break;
     		}
     	}
