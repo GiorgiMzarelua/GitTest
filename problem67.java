@@ -10,7 +10,7 @@ public class problem67 extends GraphicsProgram{
 	private JTextField textField;
 	
 	public void init(){
-		textField = new JTextField("23");
+		textField = new JTextField("20");
 		add(textField, SOUTH);
 		textField.addActionListener(this);
 		addActionListeners();
@@ -29,7 +29,7 @@ public class problem67 extends GraphicsProgram{
     			add(image, x, y);
     		}catch(Exception ex){
     			removeAll();
-				add(new GLabel("Error occured"), 23, 23);
+				add(new GLabel("Error occured"), 20, 20);
     		}
     		textField.setText("");
     	}
