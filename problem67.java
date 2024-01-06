@@ -14,7 +14,7 @@ public class problem67 extends GraphicsProgram{
 		add(textField, SOUTH);
 		textField.addActionListener(this);
 		addActionListeners();
-		GImage image = new GImage("bad path");
+		GImage image = new GImage("bat");
 		double x = getWidth()/ 2 - image.getWidth() / 2;
 		double y = getHeight()/ 2 - image.getHeight() / 2;
 		add(image, x, y);
