@@ -27,7 +27,7 @@ public class problem67 extends GraphicsProgram{
 					double y = getHeight()/ 2 - image.getHeight() / 2;
 					add(image, x, y);
 			 }catch(Exception ex){
-				 removeAll();
+				    removeAll();
 					add(new GLabel("Error occured"), 20, 20);
 			 }
 			 textField.setText("");
