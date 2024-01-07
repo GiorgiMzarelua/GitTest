@@ -7,7 +7,7 @@ public class winningNumber extends ConsoleProgram{
 	private JTextField textField;
 	public void init(){
 		textField = new JTextField(10);
-		add(textField, CENTER);
+		add(textField, SOUTH);
 	}
     public void run(){
     	while(true){
