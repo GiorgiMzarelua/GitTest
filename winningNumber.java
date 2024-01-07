@@ -1,13 +1,14 @@
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.JWindow;
 
 import acm.program.ConsoleProgram;
 
 public class winningNumber extends ConsoleProgram{
 	private static final String SENTINEL = "";
-	private JFrame textField;
+	private JWindow textField;
 	public void init(){
-		textField = new JFrame();
+		textField = new JWindow();
 		add(textField, SOUTH);
 	}
     public void run(){
