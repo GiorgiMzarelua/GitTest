@@ -15,8 +15,8 @@ public class winningNumber extends ConsoleProgram{
 		String[] children = new String[n];
 		Map<String, Integer> numbers = new HashMap<String, Integer>();
 		for(int i = 0; i < n; i++){
-			children[i] = readLine("Enter the " + (i + 1) + "-th guy's name");
-			int number = readInt("Enter the " + children[i] + "-th number");
+			children[i] = readLine("Enter the " + (i + 1) + "-th guy's name: ");
+			int number = readInt("Enter the " + children[i] + "-th number: ");
 			numbers.put(children[i], number);
 		}
 		int sum = 0;
