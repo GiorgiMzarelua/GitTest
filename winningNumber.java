@@ -25,7 +25,7 @@ public class winningNumber extends ConsoleProgram{
 		}
 		int avg = sum / n * 2 / 3;
 		for(int i = 0; i < n; i++){
-			if(numbers.containsValue(avg)){
+			if(numbers.get(children[i]) == avg){
 				println(children[i]);
 			}
 		}
