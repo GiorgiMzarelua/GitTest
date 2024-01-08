@@ -12,9 +12,10 @@ public class longestSubstringWithoutRepeatingCharecters extends ConsoleProgram{
 		int sum = sum(n);
         int[] array = new int[sum];
         int sequence = 0;
-        for(int i = 0; i < n; i++){
-        	for(int j = i; j < n; j++){
-        		String w = s.substring(i, j);
+        int counter = 1;
+        while(counter < n){
+        	for(int i = 0; i <= n - counter; i++){
+        		String w = s.substring(i, i + );
         		boolean p = isRepeating(w);
         		if(p == true) array[sequence] = j - i + 1;
         		else array[sequence] = 1;
