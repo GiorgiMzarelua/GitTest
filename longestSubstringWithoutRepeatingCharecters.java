@@ -21,7 +21,13 @@ public class longestSubstringWithoutRepeatingCharecters extends ConsoleProgram{
         		sequence++;
         	}
         }
-		return 0;
+        int ans = 0;
+        for(int i = 0; i <= sequence; i++){
+        	if(ans < array[sequence]){
+        		ans = array[sequence];
+        	}
+        }
+		return ans;
 	}
 
 	private boolean isRepeating(String w) {
