@@ -9,8 +9,8 @@ public class longestSubstringWithoutRepeatingCharecters extends ConsoleProgram{
 
 	private int lengthOfLongestSubstring(String s) {
 		int n = s.length();
-		int factorial = factorial(n);
-        int[] array = new int[factorial];
+		int sum = sum(n);
+        int[] array = new int[sum];
         int sequence = 0;
         for(int i = 0; i < n; i++){
         	for(int j = i; j < n; j++){
@@ -21,13 +21,13 @@ public class longestSubstringWithoutRepeatingCharecters extends ConsoleProgram{
         		sequence++;
         	}
         }
-        int ans = 0;
+        int max = 0;
         for(int i = 0; i <= sequence; i++){
-        	if(ans < array[sequence]){
-        		ans = array[sequence];
+        	if(max < array[sequence]){
+        		max = array[sequence];
         	}
         }
-		return ans;
+		return max;
 	}
 
 	private boolean isRepeating(String w) {
@@ -43,11 +43,11 @@ public class longestSubstringWithoutRepeatingCharecters extends ConsoleProgram{
 		return true;
 	}
 
-	private int factorial(int n) {
-		int factorial = 1;
+	private int sum(int n) {
+		int sum = 0;
 		for(int i = 1; i <= n; i++){
-			factorial = factorial * i;
+			sum += i;
 		}
-		return factorial;
+		return sum;
 	}
 }
