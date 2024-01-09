@@ -33,11 +33,12 @@ public class medianOfTwoSortedArrays extends ConsoleProgram{
 				sequence++;
 			}
 		}
-		if((size1 + size2) % 2 == 1){
-			return mergedArray[(size1 + size2) / 2];
-		}
-		else{
-			return(mergedArray[size1 + size2] / 2 + mergedArray[size1 + size2 - 1] / 2) / 2;
-		}
+		return sequence;
+//		if((size1 + size2) % 2 == 1){
+//			return mergedArray[(size1 + size2) / 2];
+//		}
+//		else{
+//			return(mergedArray[size1 + size2] / 2 + mergedArray[size1 + size2 - 1] / 2) / 2;
+//		}
 	}
 }
