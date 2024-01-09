@@ -30,4 +30,10 @@ public class programmingMethodologiesClass {
     	}
     	studentsScores.put(student, score);
     }
+    
+    public void addStudent(String student) {
+    	if(!studentsScores.containsKey(student)){
+    		studentsScores.put(student, null);
+    	}
+    }
 }
