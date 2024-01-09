@@ -1,7 +1,6 @@
 import acm.program.ConsoleProgram;
 
 public class medianOfTwoSortedArrays extends ConsoleProgram{
-	private int sequence = 0;
     public void run(){
     	int size1 = readInt("Enter the size of the first array: ");
     	int size2 = readInt("Enter the size of the second array: ");
@@ -21,24 +20,25 @@ public class medianOfTwoSortedArrays extends ConsoleProgram{
 		int size1 = array1.length;
 		int size2 = array2.length;
 		int[] mergedArray = new int[size1 + size2];
+		int sequence = 0;
 		for(int i = 0; i < size1; i++){
 			for(int j = 0; j < size2; j++){
 				if(array1[i] <= array2[j]){
 					mergedArray[sequence] = array1[i];
+					sequence++;
 					break;
 				}
 				else{
 					mergedArray[sequence] = array2[j];
+					sequence++;
 				}
-				sequence++;
 			}
 		}
-		return sequence;
-//		if((size1 + size2) % 2 == 1){
-//			return mergedArray[(size1 + size2) / 2];
-//		}
-//		else{
-//			return(mergedArray[size1 + size2] / 2 + mergedArray[size1 + size2 - 1] / 2) / 2;
-//		}
+		if((size1 + size2) % 2 == 1){
+			return mergedArray[(size1 + size2) / 2];
+		}
+		else{
+			return(mergedArray[size1 + size2] / 2 + mergedArray[size1 + size2 - 1] / 2) / 2;
+		}
 	}
 }
