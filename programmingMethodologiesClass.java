@@ -23,7 +23,11 @@ public class programmingMethodologiesClass {
 		return studentsScores.get(student);   	
     }
     
-    public void setscore(double score){
-    	
+    public void setscore(String student, double score){
+    	if(!studentsScores.containsKey(student)){
+    		System.out.println("No such student: " + student);
+    	    return;
+    	}
+    	studentsScores.put(student, score);
     }
 }
