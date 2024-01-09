@@ -11,8 +11,11 @@ public class programmingMethodologiesClassTest extends ConsoleProgram{
     	println(classB.getScore("gmzar23"));
     	println(classB.getScore("gmzar12"));
     	classB.setscore("gmzar23", 15.0);
-    	classB.setscore("gmzar21", 15.0);
+    	classB.setscore("mberi1", 15.0);
     	println(classB.getScore("gmzar23"));
     	println(classB.getScore("gmzar12"));
+    	println("-----");
+    	classB.addStudent("mberi1");
+    	println(classB.getScore("mberi1"));
     }
 }
