@@ -31,6 +31,7 @@ public class medianOfTwoSortedArrays extends ConsoleProgram{
 					mergedArray[sequence] = array2[j];
 				}
 				sequence++;
+				return sequence;
 			}
 		}
 		return sequence;
