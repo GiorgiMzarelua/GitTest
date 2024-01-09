@@ -10,5 +10,9 @@ public class programmingMethodologiesClassTest extends ConsoleProgram{
     	programmingMethodologiesClass classB = new programmingMethodologiesClass(students);
     	println(classB.getScore("gmzar23"));
     	println(classB.getScore("gmzar12"));
+    	classB.setscore("gmzar23", 15.0);
+    	classB.setscore("gmzar21", 15.0);
+    	println(classB.getScore("gmzar23"));
+    	println(classB.getScore("gmzar12"));
     }
 }
