@@ -34,13 +34,13 @@ public class medianOfTwoSortedArrays extends ConsoleProgram{
 				}
 			}
 		}
-		if(mergedArray[sequence] == array1[size1 - 1]){
+		if(mergedArray[sequence] == array1[size1]){
 			int k = sequence - size1 + 1;
 		    for(int i = k; i < size2; i++){
 		    	mergedArray[sequence + i] = array2[i];
 		    }
 		}
-		if(mergedArray[sequence] == array2[size2 - 1]){
+		if(mergedArray[sequence] == array2[size2]){
 			int k = sequence - size2 + 1;
 			for(int i = k; i < size1; i++){
 				mergedArray[sequence + i] = array1[i];
