@@ -1,3 +1,5 @@
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -19,6 +21,8 @@ public class SchoolGraphics extends GraphicsProgram{
 	public static final String DISPLAY_PUPILS = "Display Pupils";
 	public void init(){
 		Teach = new JTextField(5);
+		Teach.setActionCommand(ADD_TEACHER);
+    	Teach.addActionListener(this);
 		add(Teach, SOUTH);
 		Subject = new JTextField(5);
 		add(Subject, SOUTH);
@@ -35,7 +39,17 @@ public class SchoolGraphics extends GraphicsProgram{
 		displayTeachers = new JButton(DISPLAY_TEACHER);
 		add(displayTeachers, SOUTH);
 	}
+	
     public void run(){
     	
     }
+    
+    @Override
+	public void actionPerformed(ActionEvent e) {
+    	String st = e.getActionCommand();
+    	String teacher = Teach.getText();
+    	if(st.equals(ADD_TEACHER)){
+    		println(teacher);
+    	}
+	}
 }
