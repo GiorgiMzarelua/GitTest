@@ -18,11 +18,11 @@ public class SchoolGraphics extends GraphicsProgram{
 	public static final String DISPLAY_TEACHER = "Display Teachers";
 	public static final String DISPLAY_PUPILS = "Display Pupils";
 	public void init(){
-		Teach = new JTextField(15);
+		Teach = new JTextField(5);
 		add(Teach, SOUTH);
-		Subject = new JTextField(15);
+		Subject = new JTextField(5);
 		add(Subject, SOUTH);
-		Pupil = new JTextField(15);
+		Pupil = new JTextField(5);
 		add(Pupil, SOUTH);
 		addTeach = new JButton(ADD_TEACHER);
 		add(addTeach, SOUTH);
