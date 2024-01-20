@@ -17,6 +17,7 @@ public class stringshiAsoebisRaodenoba extends ConsoleProgram{
     	String s = readLine("Enter the string: ");
     	String ans = "";
     	int counter = 1;
+    	ans += "" + s.charAt(0);
     	if(s.equals("")){
     		println("");
     	}
@@ -26,7 +27,9 @@ public class stringshiAsoebisRaodenoba extends ConsoleProgram{
         			counter++;
         		}
         		else{
-        			ans += s.charAt(i) + counter;
+        			ans += counter;
+        			counter = 1;
+        			ans += s.charAt(i);
         		}
         	}
     		println(ans);
