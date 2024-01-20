@@ -33,7 +33,12 @@ public class stringshiAsoebisRaodenoba extends ConsoleProgram{
         		}
         	}
     		ans += counter;
-    		println(ans);
+    		if(ans.length() <= s.length()){
+    		    println(ans);	
+    		}
+    		else{
+    			println(s);
+    		}
     	}
     }
 }
