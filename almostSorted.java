@@ -29,7 +29,7 @@ public class almostSorted extends ConsoleProgram{
     public void run(){
     	ArrayList<Integer> list = new ArrayList<>();
     	while(true){
-    		int n = readInt();
+    		int n = readInt("add the number to the list: ");
     		if(n == 0){
     			break;
     		}
