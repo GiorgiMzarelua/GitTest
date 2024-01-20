@@ -17,17 +17,19 @@ public class stringshiAsoebisRaodenoba extends ConsoleProgram{
     	String s = readLine("Enter the string: ");
     	String ans = "";
     	int counter = 1;
-    	for(int i = 0; i < s.length() - 1; i++){
-    		while(s.charAt(i) == s.charAt(i + 1)){
-    			counter++;
-    			i++;
-    		}
-    		ans += s.charAt(i) + counter;
-    		counter = 1;
+    	if(s.equals("")){
+    		println("");
     	}
-        if(s.charAt(s.length() - 1) != s.charAt(s.length() - 2)){
-        	ans += s.charAt(s.length() - 1) + 1;
-        }
-        println(ans);
+    	else{
+    		for(int i = 1; i < s.length(); i++){
+        		if(s.charAt(i) == s.charAt(i - 1)){
+        			counter++;
+        		}
+        		else{
+        			ans += s.charAt(i) + counter;
+        		}
+        	}
+    		println(ans);
+    	}
     }
 }
