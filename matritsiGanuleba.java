@@ -37,8 +37,8 @@ public class matritsiGanuleba extends ConsoleProgram{
     				}
     				counter++;
     			}
+    			q = 0;
     			if(matrix[p][q] == k){
-    				q = 0;
     				counter = 0;
 					break;
 				}
