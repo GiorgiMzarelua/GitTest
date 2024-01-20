@@ -32,6 +32,7 @@ public class stringshiAsoebisRaodenoba extends ConsoleProgram{
         			ans += s.charAt(i);
         		}
         	}
+    		ans += counter;
     		println(ans);
     	}
     }
