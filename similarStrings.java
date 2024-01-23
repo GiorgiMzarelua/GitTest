@@ -1,5 +1,4 @@
 import acm.program.ConsoleProgram;
-
 public class similarStrings extends ConsoleProgram{
     public void run(){
     	String S = readLine("Enter the first String: ");
