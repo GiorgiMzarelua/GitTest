@@ -7,8 +7,6 @@ public class casino extends ConsoleProgram{
     public void run(){
     	int n = readInt("Enter the amount of money you have: ");
     	double quantity = 0;
-    	println(rgen.nextInt(1, 36));
-    	println(rgen.nextInt(1, 36));
     	for(int i = 0; i < NUMBER_OF_EXPERIMENTS; i++){
     		int experiment = playAGame(n);
     		quantity = quantity + experiment;
@@ -34,12 +32,12 @@ public class casino extends ConsoleProgram{
 				betMoney = (lostMoney + 1) / 36;
 			}
 			if(yourNum == Num){
-				currMoney -= betMoney;
+				n -= betMoney;
 				currMoney += betMoney * 36;
 				lostMoney -= betMoney * 36;
 			}
 			else{
-				currMoney -= betMoney;
+				n -= betMoney;
 				lostMoney += betMoney;
 			}
 			rolls++;
