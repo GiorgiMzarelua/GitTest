@@ -52,15 +52,15 @@ public class casino extends ConsoleProgram{
 				currMoney += betMoney * 36;
 				lostMoney -= betMoney * 36;
 			}
-			
-			else{
-				currMoney -= betMoney;
-				lostMoney += betMoney;
-			}
 			if(currMoney != n - lostMoney){
 				println("error");
 				break;
 			}
+			else{
+				currMoney -= betMoney;
+				lostMoney += betMoney;
+			}
+			
 			rolls++;
 		}
 		return rolls;
