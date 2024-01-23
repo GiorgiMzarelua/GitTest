@@ -1,4 +1,6 @@
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.Map;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -10,6 +12,8 @@ public class phoneBook extends GraphicsProgram{
 	private static final int MARGIN_X = 10;
 	private static final int MARGIN_Y = 10; 
 	private int y = 0;
+	private Map<String, String> nameList;
+	private ArrayList<JLabel> labelList;
 	private JLabel label;
 	private JTextField name;
 	private JTextField phone;
@@ -37,13 +41,6 @@ public class phoneBook extends GraphicsProgram{
 	}
     
     public void actionPerformed(ActionEvent e){
-        String cmd = e.getActionCommand();
-        if(cmd.equals("Add")){
-        	String s1 = name.getText();
-        	String s2 = phone.getText();
-        	label = new JLabel(s1 + " " + s2);
-        	add(label, MARGIN_X, y + MARGIN_Y);
-        	y = label.getY() + MARGIN_Y;
-        }
+    	
     }
 }
