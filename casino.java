@@ -37,14 +37,14 @@ public class casino extends ConsoleProgram{
 			else if(currMoney < n && currMoney >= (lostMoney + 1) / 36){
 				betMoney = (lostMoney + 1) / 36;
 			}
-			
-			else if(currMoney < n && currMoney < (lostMoney + 1) / 36){
-				betMoney = currMoney;
-			}
 			if(currMoney != n - lostMoney){
 				println("error");
 				break;
 			}
+			else if(currMoney < n && currMoney < (lostMoney + 1) / 36){
+				betMoney = currMoney;
+			}
+			
 			if(yourNum == Num){
 				currMoney += betMoney * 36;
 				lostMoney -= betMoney * 36;
