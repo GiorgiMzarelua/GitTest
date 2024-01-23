@@ -11,7 +11,7 @@ public class casino extends ConsoleProgram{
     		int experiment = playAGame(n);
     		quantity = quantity + experiment;
     	}
-    	int ans = quantity / NUMBER_OF_EXPERIMENTS;
+    	double ans = quantity / NUMBER_OF_EXPERIMENTS;
     	println("This is the answer: " + ans);
     }
 	private int playAGame(int n) {
