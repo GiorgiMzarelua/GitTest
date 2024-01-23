@@ -37,21 +37,17 @@ public class phoneBook extends GraphicsProgram{
 	}
     
     public void actionPerformed(ActionEvent e){
-    	String s1 = "";
-    	String s2 = "";
-    	String cmd = e.getActionCommand();
-    	if(cmd.equals("name: ")){
-    		JLabel lastName = new JLabel(name.getText() + ": ");
-    		s1 = lastName.getText();
-//    		add(lastName, MARGIN_X, lastName.getY() + MARGIN_Y);
-    	}
-    	if(cmd.equals("phone: ")){
-    		JLabel lastNumber = new JLabel(phone.getText());
-    		s2 = lastNumber.getText();
-//    		add(lastNumber, lastName.getX() + MARGIN_X, lastName.getY() + MARGIN_Y);
-    	}
-    	double y = label.getY();
-    	label = new JLabel(s1 + s2 + "");
-    	add(label, MARGIN_X, y + MARGIN_Y);
+        String cmd = e.getActionCommand();
+        if(cmd.equals("name: ")){
+        	int y = label.getY();
+        	label = new JLabel(name.getText());
+        	add(label, MARGIN_X, y + 2 * MARGIN_Y);
+        }
+        else if(cmd.equals("phone: ")){
+        	int x = label.getText().length();
+        	int y = label.getY();
+        	label = new JLabel(phone.getText());
+        	add(label, 2 * MARGIN_X + x * 2, y );
+        }
     }
 }
