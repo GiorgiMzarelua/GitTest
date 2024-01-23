@@ -38,7 +38,7 @@ public class game extends GraphicsProgram{
 			if(counterStop >= 3){
 				ball.move(0,0);
 			}
-			else if(counterResume >= 2){
+			else{
 				ball.move(vx, vy);
 				pause(DELAY);
 				if(ball.getX() < 0){
