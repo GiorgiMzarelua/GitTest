@@ -40,7 +40,7 @@ public class phoneBook extends GraphicsProgram{
         	String s1 = name.getText();
         	String s2 = phone.getText();
         	label = new JLabel(s1 + " " + s2);
-        	add(label, MARGIN_X, y + MARGIN_Y);
+        	add(label, MARGIN_X, y + 2 * MARGIN_Y);
         	y = label.getY();
         }
     }
