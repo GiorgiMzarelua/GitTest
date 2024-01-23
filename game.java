@@ -35,6 +35,10 @@ public class game extends GraphicsProgram{
 		vy = rgen.nextInt(0, 10);
 		vx = rgen.nextInt(0, 10);
 		while(true){
+			if(counterStop >= 3){
+				ball.pause(DELAY);
+			}
+			else{
 				ball.move(vx, vy);
 				pause(DELAY);
 				if(ball.getX() < 0){
@@ -49,7 +53,7 @@ public class game extends GraphicsProgram{
 				else if(ball.getY() > getHeight() - 2 * BALL_RADIUS){
 					vy = -vy;
 				}
-			
+			}
 		}
 	}
 
