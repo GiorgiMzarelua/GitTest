@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
 public class casino extends ConsoleProgram{
-	private static final int NUMBER_OF_EXPERIMENTS = 1000;
+	private static final double NUMBER_OF_EXPERIMENTS = 1000.0;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
     public void run(){
     	int n = readInt("Enter the amount of money you have: ");
@@ -15,7 +15,7 @@ public class casino extends ConsoleProgram{
     	println("This is the answer: " + ans);
     }
 	private int playAGame(int n) {
-		int rolls = 0;
+		double rolls = 0;
 		double lostMoney = 0;
 		double currMoney = n;
 		double betMoney = 0;
@@ -26,15 +26,15 @@ public class casino extends ConsoleProgram{
 			if(lostMoney <= 0){
 				betMoney = 1;
 			}
-			else if(currMoney >= (lostMoney + 1) / 36){
-				betMoney = (lostMoney + 1) / 36;
+			else if(currMoney >= (lostMoney + 1) / 36.0){
+				betMoney = (lostMoney + 1) / 36.0;
 			}
-			else if(currMoney < (lostMoney + 1) / 36){
+			else if(currMoney < (lostMoney + 1) / 36.0){
 				betMoney = currMoney;
 			}
 			if(yourNum == Num){
-				currMoney += betMoney * 36;
-				lostMoney -= betMoney * 36;
+				currMoney += betMoney * 36.0;
+				lostMoney -= betMoney * 36.0;
 			}
 			else{
 				currMoney -= betMoney;
