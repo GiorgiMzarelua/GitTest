@@ -17,7 +17,7 @@ public class game extends GraphicsProgram{
 	private int counterStop;
 	private int counterResume;
 	RandomGenerator rgen = RandomGenerator.getInstance();
-	private static final int BALL_RADIUS = 1;
+	private static final int BALL_RADIUS = 15;
 	private static final int DELAY = 10;
 	private GOval ball;
 	public void init(){
@@ -54,7 +54,7 @@ public class game extends GraphicsProgram{
 	}
 
 	private void drawTheBall() {
-		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS, getWidth() - BALL_RADIUS, getHeight() - BALL_RADIUS);
+		ball = new GOval(getWidth() - BALL_RADIUS, getHeight() - BALL_RADIUS, 2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setColor(Color.BLACK);
 		add(ball);
 	}
