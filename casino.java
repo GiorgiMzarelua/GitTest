@@ -23,13 +23,13 @@ public class casino extends ConsoleProgram{
 		while(currMoney > 0){
 			int yourNum = readInt(0, 36);
 			int Num = readInt(0, 36);
-			if(currMoney >= n){
+			if(lostMoney <= 0){
 				betMoney = 1;
 			}
-			else if(currMoney < n && currMoney >= (lostMoney + 1) / 36){
+			else if(currMoney >= (lostMoney + 1) / 36){
 				betMoney = (lostMoney + 1) / 36;
 			}
-			else if(currMoney < n && currMoney < (lostMoney + 1) / 36){
+			else if(currMoney < (lostMoney + 1) / 36){
 				betMoney = currMoney;
 			}
 			if(yourNum == Num){
