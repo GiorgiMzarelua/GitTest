@@ -11,14 +11,14 @@ public class casino extends ConsoleProgram{
     		int experiment = playAGame(n);
     		quantity = quantity + experiment;
     	}
-    	double ans = quantity / NUMBER_OF_EXPERIMENTS;
+    	int ans = quantity / NUMBER_OF_EXPERIMENTS;
     	println("This is the answer: " + ans);
     }
 	private int playAGame(int n) {
 		int rolls = 0;
-		double lostMoney = 0;
-		double currMoney = n;
-		double betMoney = 0;
+		int lostMoney = 0;
+		int currMoney = n;
+		int betMoney = 0;
 		
 		while(currMoney > 0){
 			int yourNum = readInt(0, 36);
