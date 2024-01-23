@@ -21,10 +21,10 @@ public class casino extends ConsoleProgram{
 		double betMoney = 0;
 		
 		while(currMoney > 0){
-			int yourNum = rgen.nextInt(0, 36);
-			int Num = rgen.nextInt(0, 36);
+			int yourNum = readInt(0, 36);
+			int Num = readInt(0, 36);
 			if(currMoney >= n){
-                betMoney = 1;				
+				betMoney = 1;
 			}
 			else if(currMoney < n && currMoney >= (lostMoney + 1) / 36){
 				betMoney = (lostMoney + 1) / 36;
