@@ -11,13 +11,7 @@ public class similarStrings extends ConsoleProgram{
 	private boolean same(String S, String T) {
 		int n = S.length();
 		for(int i = 0; i < n; i++){
-			if(S.charAt(i) != T.charAt(i) && S.charAt(n - i - 1) != T.charAt(n - i - 1)){
-				return false;
-			}
-			else if(S.charAt(i) != T.charAt(n - i - 1) && S.charAt(n - i - 1) != T.charAt(i)){
-				return false;
-			}
-			else if(S.charAt(i) != S.charAt(n - i - 1) && T.charAt(i) != T.charAt(n - i - 1)){
+			if((S.charAt(i) != T.charAt(i) && S.charAt(n - i - 1) != T.charAt(n - i - 1)) || (S.charAt(i) != T.charAt(n - i - 1) && S.charAt(n - i - 1) != T.charAt(i)) || (S.charAt(i) != S.charAt(n - i - 1) && T.charAt(i) != T.charAt(n - i - 1))){
 				return false;
 			}
 		}
