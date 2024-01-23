@@ -66,9 +66,6 @@ public class casino extends ConsoleProgram{
 			}
 			rolls++;
 		}
-		if(currMoney != n - lostMoney){
-			println("error");
-		}
 		return rolls;
 	}
 }
