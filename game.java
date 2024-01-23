@@ -81,7 +81,7 @@ public class game extends GraphicsProgram{
     		counterStop++;
     		counterResume = 0;
     	}
-    	else if(e.getLocationOnScreen() != null && (vx != 0 || vy != 0)){
+    	else if(e.getLocationOnScreen() != null && (vx != 0 && vy != 0)){
     		counterResume++;
     		counterStop = 0;
     	}
