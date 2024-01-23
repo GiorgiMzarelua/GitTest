@@ -36,10 +36,6 @@ public class casino extends ConsoleProgram{
 				currMoney += betMoney * 36;
 				lostMoney -= betMoney * 36;
 			}
-			if(currMoney != n - lostMoney){
-				println("error");
-				break;
-			}
 			else{
 				currMoney -= betMoney;
 				lostMoney += betMoney;
