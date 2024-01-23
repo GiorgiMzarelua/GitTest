@@ -78,12 +78,12 @@ public class game extends GraphicsProgram{
 	@Override
     public void mouseClicked(MouseEvent e){
     	if(e.getLocationOnScreen() != null && vx == 0 && vy ==0){
-    		counterStop++;
-    		counterResume = 0;
+    		counterStop = 0;
+    		counterResume++;
     	}
     	else if(e.getLocationOnScreen() != null && (vx != 0 && vy != 0)){
-    		counterResume++;
-    		counterStop = 0;
+    		counterResume = 0;
+    		counterStop++;
     	}
     }
 	
