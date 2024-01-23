@@ -32,9 +32,8 @@ public class casino extends ConsoleProgram{
 				betMoney = currMoney;
 			}
 			if(yourNum == Num){
-				currMoney -= betMoney;
-				currMoney += betMoney * 36;
-				lostMoney -= betMoney * 36;
+				currMoney += betMoney * 35;
+				lostMoney -= betMoney * 35;
 			}
 			else{
 				currMoney -= betMoney;
