@@ -23,10 +23,12 @@ public class phoneBook extends GraphicsProgram{
 		add(new JLabel("name: "), SOUTH);
 		name = new JTextField(15);
 		name.setActionCommand("Add");
+		name.addActionListener(this);
 		add(name,SOUTH);
 		add(new JLabel("phone: "), SOUTH);
 		phone = new JTextField(15);
 	    phone.setActionCommand("Add");
+	    phone.addActionListener(this);
 		add(phone, SOUTH);
 		add = new JButton("Add");
 		add.getActionCommand();
