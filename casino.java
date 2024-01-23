@@ -16,9 +16,9 @@ public class casino extends ConsoleProgram{
     }
 	private int playAGame(int n) {
 		int rolls = 0;
-		int lostMoney = 0;
-		int currMoney = n;
-		int betMoney = 0;
+		double lostMoney = 0;
+		double currMoney = n;
+		double betMoney = 0;
 		
 		while(currMoney > 0){
 			int yourNum = readInt(0, 36);
