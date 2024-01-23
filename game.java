@@ -36,9 +36,9 @@ public class game extends GraphicsProgram{
 		vx = rgen.nextInt(0, 10);
 		while(true){
 			if(counterStop >= 3){
-				ball.pause(DELAY);
+				ball.move(0,0);
 			}
-			else{
+			else if(counterResume >= 2){
 				ball.move(vx, vy);
 				pause(DELAY);
 				if(ball.getX() < 0){
@@ -52,7 +52,7 @@ public class game extends GraphicsProgram{
 				}
 				else if(ball.getY() > getHeight() - 2 * BALL_RADIUS){
 					vy = -vy;
-				}
+				} 
 			}
 		}
 	}
@@ -77,11 +77,11 @@ public class game extends GraphicsProgram{
 	
 	@Override
     public void mouseClicked(MouseEvent e){
-    	if(e.getLocationOnScreen() != null){
+    	if(e.getLocationOnScreen() != null && vx == 0 && vy ==0){
     		counterStop++;
     		counterResume = 0;
     	}
-    	else{
+    	else if(e.getLocationOnScreen() != null && (vx != 0 || vy != 0)){
     		counterResume++;
     		counterStop = 0;
     	}
