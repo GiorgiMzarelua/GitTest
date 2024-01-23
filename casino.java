@@ -8,13 +8,13 @@ public class casino extends ConsoleProgram{
     	int n = readInt("Enter the amount of money you have: ");
     	double quantity = 0;
     	for(int i = 0; i < NUMBER_OF_EXPERIMENTS; i++){
-    		int experiment = playAGame(n);
+    		double experiment = playAGame(n);
     		quantity = quantity + experiment;
     	}
     	double ans = quantity / NUMBER_OF_EXPERIMENTS;
     	println("This is the answer: " + ans);
     }
-	private int playAGame(int n) {
+	private double playAGame(int n) {
 		double rolls = 0;
 		double lostMoney = 0;
 		double currMoney = n;
