@@ -15,7 +15,7 @@ public class casino extends ConsoleProgram{
     	println("This is the answer: " + ans);
     }
 	private int playAGame(int n) {
-		int counter = 0;
+		int rolls = 0;
 		double lostMoney = 0;
 		double currMoney = n;
 		double betMoney = 0;
@@ -33,13 +33,14 @@ public class casino extends ConsoleProgram{
 			}
 			if(yourNum == Num){
 				currMoney += betMoney * 36;
+				lostMoney -= betMoney * 36;
 			}
 			else{
 				currMoney -= betMoney;
+				lostMoney += betMoney;
 			}
-			counter++;
+			rolls++;
 		}
-		return counter;
+		return rolls;
 	}
-	
 }
