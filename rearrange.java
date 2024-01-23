@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
@@ -10,6 +11,7 @@ public class rearrange extends ConsoleProgram{
     }
 
 	private String rearrange(String s) {
+		ArrayList<String> list = new ArrayList<String>();
 		StringTokenizer tokenizer = new StringTokenizer(s);
 		String w = null;
 		int[] array = new int[tokenizer.countTokens()];
@@ -29,8 +31,11 @@ public class rearrange extends ConsoleProgram{
 			sorted[i] = index;
 		}
 		for(int i = 0; i < tokenizer.countTokens(); i++){
-			
+			list.add(tokenizer.nextToken());
 		}
-		return null;
+		for(int i = 0; i < tokenizer.countTokens(); i++){
+			w += list.get(sorted[i]) + " ";
+		}
+		return w;
 	}
 }
