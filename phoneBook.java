@@ -34,8 +34,7 @@ public class phoneBook extends GraphicsProgram{
 		add.getActionCommand();
 		add.addActionListener(this);
 		add(add, SOUTH);
-		lastName.setLocation(0, 0);
-		lastNumber.setLocation(0, 0);
+		
 	}
     
     public void actionPerformed(ActionEvent e){
