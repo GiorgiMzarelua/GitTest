@@ -9,8 +9,7 @@ import acm.program.GraphicsProgram;
 public class phoneBook extends GraphicsProgram{
 	private static final int MARGIN_X = 10;
 	private static final int MARGIN_Y = 10; 
-	private JLabel lastName;
-	private JLabel lastNumber;
+	private JLabel label;
 	private JTextField name;
 	private JTextField phone;
 	private JButton add;
@@ -38,14 +37,21 @@ public class phoneBook extends GraphicsProgram{
 	}
     
     public void actionPerformed(ActionEvent e){
+    	String s1 = "";
+    	String s2 = "";
     	String cmd = e.getActionCommand();
     	if(cmd.equals("name: ")){
-    		lastName = new JLabel(name.getText() + ": ");
-    		add(lastName, MARGIN_X, lastName.getY() + MARGIN_Y);
+    		JLabel lastName = new JLabel(name.getText() + ": ");
+    		s1 = lastName.getText();
+//    		add(lastName, MARGIN_X, lastName.getY() + MARGIN_Y);
     	}
     	if(cmd.equals("phone: ")){
-    		lastNumber = new JLabel(phone.getText());
-    		add(lastNumber, lastName.getX() + MARGIN_X, lastName.getY() + MARGIN_Y);
+    		JLabel lastNumber = new JLabel(phone.getText());
+    		s2 = lastNumber.getText();
+//    		add(lastNumber, lastName.getX() + MARGIN_X, lastName.getY() + MARGIN_Y);
     	}
+    	double y = label.getY();
+    	label = new JLabel(s1 + s2 + "");
+    	add(label, MARGIN_X, y + MARGIN_Y);
     }
 }
