@@ -7,6 +7,8 @@ public class casino extends ConsoleProgram{
     public void run(){
     	int n = readInt("Enter the amount of money you have: ");
     	double quantity = 0;
+    	println(rgen.nextInt(1, 36));
+    	println(rgen.nextInt(1, 36));
     	for(int i = 0; i < NUMBER_OF_EXPERIMENTS; i++){
     		int experiment = playAGame(n);
     		quantity = quantity + experiment;
