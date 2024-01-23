@@ -43,7 +43,7 @@ public class phoneBook extends GraphicsProgram{
         if(cmd.equals("name: ")){
         	label = new JLabel(name.getText());
         	add(label, MARGIN_X, y + MARGIN_Y);
-        	x = MARGIN_X + 3 * label.getText().length() + MARGIN_X;
+        	x = MARGIN_X + 5 * label.getText().length() + MARGIN_X;
         }
         else if(cmd.equals("phone: ")){
         	label = new JLabel(phone.getText());
