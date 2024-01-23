@@ -40,10 +40,6 @@ public class casino extends ConsoleProgram{
 				currMoney -= betMoney;
 				lostMoney += betMoney;
 			}
-			if(currMoney != n - lostMoney){
-				println("error");
-				break;
-			}
 			rolls++;
 		}
 		return rolls;
