@@ -15,7 +15,9 @@ public class fillInSudoku extends ConsoleProgram{
     	sudoku[2][0] = 7;
     	sudoku[2][1] = 8;
     	sudoku[2][2] = 9;
-    	println(Arrays.toString(sudoku));
+    	for(int i = 0; i < 3; i++){
+    		println(Arrays.toString(sudoku[i]));
+    	}
     }
 
 	private int[][] fillSudoku(int[][] sudoku) {
