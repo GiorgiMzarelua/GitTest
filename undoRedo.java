@@ -2,8 +2,11 @@ import java.util.ArrayList;
 
 public class undoRedo {
 	private ArrayList<String> list;
-	private String lastElement;
 	private int lastElementIndex;
+	public undoRedo(){
+		list = new ArrayList();
+		int lastElementIndex;
+	}
     public String get(){
         if(list.get(lastElementIndex) != null){
         	list.get(lastElementIndex);
