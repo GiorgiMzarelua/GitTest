@@ -11,7 +11,7 @@ public class validSudoku extends ConsoleProgram{
     	sudoku[1][2] = 6;
     	sudoku[2][0] = 7;
     	sudoku[2][1] = 8;
-    	sudoku[2][2] = 8;
+    	sudoku[2][2] = 9;
     	boolean isValid = isValid(sudoku);
     	println(isValid);
     }
