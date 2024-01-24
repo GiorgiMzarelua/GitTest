@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class fillInSudoku extends ConsoleProgram{
@@ -14,7 +16,7 @@ public class fillInSudoku extends ConsoleProgram{
     	sudoku1[6] = 7;
     	sudoku1[7] = 8;
     	sudoku1[8] = 9;
-    	println(sudoku1.toString());
+    	println(Arrays.toString(sudoku1));
     }
 
 	private int[][] fillSudoku(int[][] sudoku) {
