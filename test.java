@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class test extends ConsoleProgram{
     public void run(){
-    	println(223081211 % 99);
+    	println(311754210 % 99);
     }
 }
 
