@@ -38,7 +38,7 @@ public class multiply extends ConsoleProgram{
 			for(int j = num2.size() - 1; j >= 0; j--){
 				list1.add(num1.get(i) * num2.get(j) % 10 + rem);
 				rem = num1.get(i) * num2.get(j) / 10;
-				
+				int k = list2.get(num2.size() - 1 - j);
 			}
 			list1.add(num1.get(num1.size() - 1) * num2.get(num2.size() - 1) / 10 );
 		}
