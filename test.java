@@ -8,6 +8,7 @@ public class test extends ConsoleProgram{
     			break;
     		}
     	}
+    	println("nope");
     }
 }
 
