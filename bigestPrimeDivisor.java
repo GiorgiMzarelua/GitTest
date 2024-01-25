@@ -14,7 +14,7 @@ public class bigestPrimeDivisor extends ConsoleProgram{
 				return i;
 			}
 		}
-		return 0;
+        return 2;
 	}
 
 	private boolean isPrime(int i) {
