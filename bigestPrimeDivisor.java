@@ -10,7 +10,7 @@ public class bigestPrimeDivisor extends ConsoleProgram{
 	private int biggestPrimeDivisor(int n) {
 		for(int i = n; i >= 1; i--){
 			boolean isPrime = isPrime(i);
-			if(isPrime == true && n % i ==0){
+			if(isPrime == true && n % i == 0){
 				return i;
 			}
 		}
