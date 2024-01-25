@@ -1,4 +1,28 @@
+import acm.program.ConsoleProgram;
 
-public class bigestPrimeDivisor {
+public class bigestPrimeDivisor extends ConsoleProgram{
+    public void run(){
+    	int n = readInt("Enter the number: ");
+    	int ans = biggestPrimeDivisor(n);
+    	println(ans);
+    }
 
+	private int biggestPrimeDivisor(int n) {
+		for(int i = n; i >= 1; i--){
+			boolean isPrime = isPrime(i);
+			if(isPrime == true){
+				return i;
+			}
+		}
+		return 0;
+	}
+
+	private boolean isPrime(int i) {
+		int counter = 0;
+		for(int j = 1; j <= i; j++){
+			if(j % i == 0) counter++;
+		}
+		if(counter == 2) return true;
+		return false;
+	}
 }

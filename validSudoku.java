@@ -30,6 +30,69 @@ public class validSudoku extends ConsoleProgram{
 						return false;
 					}
 				}
+				if(i % 3 == 0 && j % 3 == 0){
+					for(int p = i; p < i + 3; p++){
+						for(int q = j; q < j + 3; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 0 && j % 3 == 1){
+					for(int p = i; p < i + 3; p++){
+						for(int q = j - 1; q < j + 2; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 0 && j % 3 == 2){
+					for(int p = i; p < i + 3; p++){
+						for(int q = j - 2; q < j + 1; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 1 && j % 3 == 0){
+					for(int p = i - 1; p < i + 2; p++){
+						for(int q = j; q < j + 3; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 1 && j % 3 == 1){
+					for(int p = i - 1; p < i + 2; p++){
+						for(int q = j - 1; q < j+ 2; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 1 && j % 3 == 2){
+					for(int p = i - 1; p < i + 2; p++){
+						for(int q = j - 2; q < j + 1; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 2 && j % 3 == 0){
+					for(int p = i - 2; p < i + 1; p++){
+						for(int q = j; q < j + 3; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 2 && j % 3 == 1){
+					for(int p = i - 2; p < i + 1; p++){
+						for(int q = j - 1; q < j + 2; q++){
+							
+						}
+					}
+				}
+				else if(i % 3 == 2 && j % 3 == 2){
+					for(int p = i - 2; p < i + 1; p++){
+						for(int q = j - 2; q < j + 1; q++){
+							
+						}
+					}
+				}
 			}
 		}
 		return true;
