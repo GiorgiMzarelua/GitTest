@@ -20,7 +20,7 @@ public class bigestPrimeDivisor extends ConsoleProgram{
 	private boolean isPrime(int i) {
 		int counter = 0;
 		for(int j = 1; j <= i; j++){
-			if(j % i == 0) counter++;
+			if(i % j == 0) counter++;
 		}
 		if(counter == 2) return true;
 		return false;
