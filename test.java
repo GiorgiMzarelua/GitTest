@@ -1,13 +1,19 @@
+import java.awt.Color;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
 import javax.swing.JTextField;
 
+import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class test extends GraphicsProgram implements ComponentListener{
 	private JTextField textField;
+	private GRect rect;
+	private GOval circle;
+	private double x;
+	private double y;
 	public void init(){
 		addComponentListener(this);
         addMouseListeners(this);
@@ -15,9 +21,15 @@ public class test extends GraphicsProgram implements ComponentListener{
         textField.addActionListener(this);
 		add(textField, SOUTH);
 		createGrids();
+		addStone();
+		stoneMovement();
 	}
 	
-    private void createGrids() {
+    private void stoneMovement() {
+		
+	}
+
+	private void createGrids() {
     	removeAll();
     	int size = Math.min(getWidth(), getHeight());
 		for(int i = 0; i < 8; i++){
@@ -28,6 +40,17 @@ public class test extends GraphicsProgram implements ComponentListener{
 				add(rect, x, y);
 			}
 		}
+	}
+
+	private void addStone() {
+		circle = new GOval(getHeight() / 8, getHeight() / 8);
+		circle.setFilled(true);
+		circle.setColor(Color.RED);
+		add(circle, getHeight() / 2, getHeight() / 2);
+		rect = new GRect((getHeight() / 8) * 0.8, (getHeight() / 8) * 0.8);
+		rect.setFilled(true);
+		rect.setColor(Color.GREEN);
+		add(rect, getHeight() / 2 + 0.1 * getHeight() / 8, getHeight() / 2 + 0.1 * getHeight() / 8);
 	}
 
 	public void run(){
