@@ -28,7 +28,6 @@ public class students extends ConsoleProgram{
     	TakosFriends.add("Mako");
     	TakosFriends.add("Lile");
     	TakosFriends.add("Nino");
-    	TomasFriends.add(e)
     	studentToFriends.put("Lile", LilesFriends);
     	studentToFriends.put("Mako", MakosFriends);
     	studentToFriends.put("Nino", NinosFriends);
