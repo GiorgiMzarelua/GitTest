@@ -73,29 +73,29 @@ public class test extends GraphicsProgram implements ComponentListener{
 	private void goingOnTheBottom() {
 		remove(rect);
 		remove(circle);
-		add(rect, rect.getX(), rect.getY() + Math.min(getWidth(), getHeight()) / 8);
 		add(circle, circle.getX() , circle.getY() + Math.min(getWidth(), getHeight()) / 8);
+		add(rect, rect.getX(), rect.getY() + Math.min(getWidth(), getHeight()) / 8);
 	}
 
 	private void goingOnTheTop() {
 		remove(rect);
 		remove(circle);
-		add(rect, rect.getX(), rect.getY() - Math.min(getWidth(), getHeight()) / 8);
 		add(circle, circle.getX() , circle.getY() - Math.min(getWidth(), getHeight()) / 8);
+		add(rect, rect.getX(), rect.getY() - Math.min(getWidth(), getHeight()) / 8);
 	}
 
 	private void goingOnTheRight() {
 		remove(rect);
 		remove(circle);
-		add(rect, rect.getY() + Math.min(getWidth(), getHeight()) / 8, rect.getY());
 		add(circle, circle.getX() + Math.min(getWidth(), getHeight()) / 8, circle.getY());
+		add(rect, rect.getY() + Math.min(getWidth(), getHeight()) / 8, rect.getY());
 	}
 
 	private void goingOnTheLeft() {
 		remove(rect);
 		remove(circle);
-		add(rect, rect.getX() - (Math.min(getWidth(), getHeight()) / 8), rect.getY());
 		add(circle, circle.getY() - (Math.min(getWidth(), getHeight()) / 8), circle.getY());
+		add(rect, rect.getX() - (Math.min(getWidth(), getHeight()) / 8), rect.getY());
 	}
 
 	@Override
