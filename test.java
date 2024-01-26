@@ -21,7 +21,6 @@ public class test extends GraphicsProgram implements ComponentListener{
         textField.addActionListener(this);
 		add(textField, SOUTH);
 		createGrids();
-		addStone();
 		stoneMovement();
 	}
 	
@@ -40,6 +39,7 @@ public class test extends GraphicsProgram implements ComponentListener{
 				add(rect, x, y);
 			}
 		}
+		addStone();
 	}
 
 	private void addStone() {
