@@ -3,9 +3,7 @@ import java.awt.event.ComponentListener;
 
 import javax.swing.JTextField;
 
-import acm.graphics.GCanvas;
 import acm.graphics.GRect;
-import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
 public class test extends GraphicsProgram implements ComponentListener{
@@ -15,7 +13,7 @@ public class test extends GraphicsProgram implements ComponentListener{
         addMouseListeners(this);
         textField = new JTextField(15);
         textField.addActionListener(this);
-//		add(textField, SOUTH);
+		add(textField, SOUTH);
 		createGrids();
 	}
 	
