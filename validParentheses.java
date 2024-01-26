@@ -34,6 +34,11 @@ public class validParentheses extends ConsoleProgram{
 		}
 		for(int i = 0; i < s.length() - 1; i++){
 			if(s.charAt(i) == '('){
+				int k = i + 1;
+				while(s.charAt(k) != ')'){
+					if(s.charAt(k) == '(') return false;
+					k++;
+				}
 				int open = 1;
 				int closed = 0;
 				for(int j = i + 1; j < s.length(); j++){
@@ -43,6 +48,11 @@ public class validParentheses extends ConsoleProgram{
 				if(open != closed) return false;
 			}
 			else if(s.charAt(i) == '{'){
+				int k = i + 1;
+				while(s.charAt(k) != '}'){
+					if(s.charAt(k) == '{') return false;
+					k++;
+				}
 				int open = 1;
 				int closed = 0;
 				for(int j = i + 1; j < s.length(); j++){
@@ -52,6 +62,11 @@ public class validParentheses extends ConsoleProgram{
 				if(open != closed) return false;
 			}
 			else if(s.charAt(i) == '['){
+				int k = i + 1;
+				while(s.charAt(k) != ']'){
+					if(s.charAt(k) == '[') return false;
+					k++;
+				}
 				int open = 1;
 				int closed = 0;
 				for(int j = i + 1; j < s.length(); j++){
@@ -60,7 +75,7 @@ public class validParentheses extends ConsoleProgram{
 				}
 				if(open != closed) return false;
 		    }
-		}	
+		}
 		return true;
     }
 }
