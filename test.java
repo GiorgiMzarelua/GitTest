@@ -12,8 +12,8 @@ public class test extends GraphicsProgram implements ComponentListener{
 	private JTextField textField;
 	private GRect rect;
 	private GOval circle;
-	private double x;
-	private double y;
+	private double x = 4;
+	private double y = 4;
 	public void init(){
 		addComponentListener(this);
         addMouseListeners(this);
@@ -39,18 +39,18 @@ public class test extends GraphicsProgram implements ComponentListener{
 				add(rect, x, y);
 			}
 		}
-		addStone();
+		addStone(size);
 	}
 
-	private void addStone() {
+	private void addStone(int size) {
 		circle = new GOval(getHeight() / 8, getHeight() / 8);
 		circle.setFilled(true);
 		circle.setColor(Color.RED);
-		add(circle, getHeight() / 2, getHeight() / 2);
+		add(circle, x * size / 8, y * size / 2);
 		rect = new GRect((getHeight() / 8) * 0.7, (getHeight() / 8) * 0.7);
 		rect.setFilled(true);
 		rect.setColor(Color.GREEN);
-		add(rect, getHeight() / 2 + 0.15 * getHeight() / 8, getHeight() / 2 + 0.15 * getHeight() / 8);
+		add(rect, x * size / 8 + 0.15 * size / 8, y * size / 8 + 0.15 * size / 8);
 	}
 
 	public void run(){
