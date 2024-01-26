@@ -47,10 +47,10 @@ public class test extends GraphicsProgram implements ComponentListener{
 		circle.setFilled(true);
 		circle.setColor(Color.RED);
 		add(circle, getHeight() / 2, getHeight() / 2);
-		rect = new GRect((getHeight() / 8) * 0.8, (getHeight() / 8) * 0.8);
+		rect = new GRect((getHeight() / 8) * 0.7, (getHeight() / 8) * 0.7);
 		rect.setFilled(true);
 		rect.setColor(Color.GREEN);
-		add(rect, getHeight() / 2 + 0.1 * getHeight() / 8, getHeight() / 2 + 0.1 * getHeight() / 8);
+		add(rect, getHeight() / 2 + 0.15 * getHeight() / 8, getHeight() / 2 + 0.15 * getHeight() / 8);
 	}
 
 	public void run(){
