@@ -33,10 +33,49 @@ public class validParentheses2 extends ConsoleProgram{
 			return false;
 		}
 		for(int i = 0; i < s.length() - 1; i++){
-			if(s.charAt(i) == '(' && s.charAt(i + 1 ) != ')') return false;
-			else if(s.charAt(i) == '{' && s.charAt(i + 1 ) != '}') return false;
-			else if(s.charAt(i) == '[' && s.charAt(i + 1 ) != ']') return false;
-		}	
+			if(s.charAt(i) == '('){
+				int k = i + 1;
+				while(s.charAt(k) != ')'){
+					if(s.charAt(k) == '(') return false;
+					k++;
+				}
+				int open = 1;
+				int closed = 0;
+				for(int j = i + 1; j < s.length(); j++){
+					if(s.charAt(j) == '(') open++;
+					else if(s.charAt(j) == ')') closed++;
+				}
+				if(open != closed) return false;
+			}
+			else if(s.charAt(i) == '{'){
+				int k = i + 1;
+				while(s.charAt(k) != '}'){
+					if(s.charAt(k) == '{') return false;
+					k++;
+				}
+				int open = 1;
+				int closed = 0;
+				for(int j = i + 1; j < s.length(); j++){
+					if(s.charAt(j) == '{') open++;
+					else if(s.charAt(j) == '}') closed++;
+				}
+				if(open != closed) return false;
+			}
+			else if(s.charAt(i) == '['){
+				int k = i + 1;
+				while(s.charAt(k) != ']'){
+					if(s.charAt(k) == '[') return false;
+					k++;
+				}
+				int open = 1;
+				int closed = 0;
+				for(int j = i + 1; j < s.length(); j++){
+					if(s.charAt(j) == '[') open++;
+					else if(s.charAt(j) == ']') closed++;
+				}
+				if(open != closed) return false;
+		    }
+		}
 		return true;
     }
 }
