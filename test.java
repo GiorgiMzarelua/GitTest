@@ -20,6 +20,7 @@ public class test extends GraphicsProgram implements ComponentListener{
 	}
 	
     private void createGrids() {
+    	removeAll();
     	int size = Math.min(getWidth(), getHeight());
 		for(int i = 0; i < 8; i++){
 			for(int j = 0; j < 8; j++){
