@@ -47,7 +47,7 @@ public class test extends GraphicsProgram implements ComponentListener{
 
 	@Override
 	public void componentResized(ComponentEvent arg0) {
-		
+		createGrids();
 	}
 
 	@Override
