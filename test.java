@@ -15,7 +15,7 @@ public class test extends GraphicsProgram implements ComponentListener{
         addMouseListeners(this);
         textField = new JTextField(15);
         textField.addActionListener(this);
-		add(textField, NORTH);
+//		add(textField, SOUTH);
 		createGrids();
 	}
 	
