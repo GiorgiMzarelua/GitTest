@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
@@ -53,9 +54,49 @@ public class test extends GraphicsProgram implements ComponentListener{
 		add(rect, x * size / 8 + 0.15 * size / 8, y * size / 8 + 0.15 * size / 8);
 	}
 
-	public void run(){
-    
+	public void actionPerformed(ActionEvent e){
+        String text = textField.getText();
+        if(text.equals("left") && circle.getX() > 2){
+        	goingOnTheLeft();
+        }
+        else if(text.equals("right") && circle.getX() < Math.min(getWidth(), getHeight())){
+        	goingOnTheRight();
+        }
+        else if(text.equals("top") && circle.getY() > 2){
+        	goingOnTheTop();
+        }
+        else if(text.equals("bottom") && circle.getY() < Math.min(getWidth(), getHeight())){
+        	goingOnTheBottom();
+        }
     }
+    
+	private void goingOnTheBottom() {
+		remove(rect);
+		remove(circle);
+		add(rect, x, y + Math.min(getWidth(), getHeight()) / 8);
+		add(circle, x , y + Math.min(getWidth(), getHeight()) / 8);
+	}
+
+	private void goingOnTheTop() {
+		remove(rect);
+		remove(circle);
+		add(rect, x, y - Math.min(getWidth(), getHeight()) / 8);
+		add(circle, x , y - Math.min(getWidth(), getHeight()) / 8);
+	}
+
+	private void goingOnTheRight() {
+		remove(rect);
+		remove(circle);
+		add(rect, x + Math.min(getWidth(), getHeight()) / 8, y);
+		add(circle, x + Math.min(getWidth(), getHeight()) / 8, y);
+	}
+
+	private void goingOnTheLeft() {
+		remove(rect);
+		remove(circle);
+		add(rect, x - Math.min(getWidth(), getHeight()) / 8, y);
+		add(circle, x - Math.min(getWidth(), getHeight()) / 8, y);
+	}
 
 	@Override
 	public void componentHidden(ComponentEvent arg0) {
