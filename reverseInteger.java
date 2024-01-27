@@ -8,6 +8,7 @@ public class reverseInteger extends ConsoleProgram{
     }
 
 	private int reversedInt(int x) {
+		if(Math.pow(2, 31) - 1 < x || -Math.pow(2, 31) > x) return 0;
 		int y = mod(x);
 		int ans = 0;
 		while(y > 0){
