@@ -14,7 +14,7 @@ public class FindTheIndexOfTheFirstOccurrenceInAString extends ConsoleProgram{
 		if(nS > hS) return -1;
 		if(hS == nS && hS == 1 && haystack.charAt(0) == needle.charAt(0)) return 0;
 		for(int i = 0; i < hS; i++){
-			if(haystack.charAt(i) == needle.charAt(0) && hS - i - 1 >= nS){
+			if(haystack.charAt(i) == needle.charAt(0) ){
 				int counter = 0;
 				for(int j = i; j < i + nS; j++){
 					if(haystack.charAt(j) == needle.charAt(j - i)) counter++;
