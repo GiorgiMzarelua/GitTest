@@ -4,7 +4,6 @@ public class reverseInteger extends ConsoleProgram{
     public void run(){
     	int x = readInt("Enter the number to reverse: ");
     	int ans = reversedInt(x);
-    	println(Math.pow(2, 31));
     	println(ans);
     }
 
@@ -16,6 +15,7 @@ public class reverseInteger extends ConsoleProgram{
 			ans = 10 * ans + y % 10;
 			y = y / 10;
 		}
+		if(Math.pow(2, 31) - 1 < ans || -Math.pow(2, 31) > ans) return 0;
 		if( x > 0) return ans;
 		else return -ans;
 	}
