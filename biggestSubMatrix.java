@@ -18,19 +18,25 @@ public class biggestSubMatrix extends ConsoleProgram{
 		int size = 0;
 		for(int i = 0; i < matrix.length; i++){
 			for(int j = 0; j < matrix[0].length; j++){
-				int counter = 0;
 				for(int p = i; p < matrix.length; p++){
-					int q;
-					for(q = j; q < matrix[0].length; q++){
-						if(matrix[p][q] == 0) break;
-						else counter++;
+					for(int q = j; q < matrix[0].length; q++){
+						if(isAreaFilled(matrix, i, j, p, q) == true){
+							int currArea = (p - i + 1) * (q - j + 1);
+							size = Math.max(size, currArea);
+						}
 					}
-					if(matrix[p][q] == 0) break;
 				}
-				size = Math.max(size, counter);
-				counter = 0;
 			}
 		}
 		return size;
+	}
+
+	private boolean isAreaFilled(int[][] matrix, int i, int j, int p, int q) {
+		for(int I = i; I <= p; I++){
+			for(int J = j; J <= q; J++){
+				if(matrix[I][J] != 1) return false;
+			}
+		}
+		return true;
 	}
 }
