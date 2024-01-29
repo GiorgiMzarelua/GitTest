@@ -26,7 +26,6 @@ public class biggestSubMatrix extends ConsoleProgram{
 						else counter++;
 					}
 					if(matrix[p][q] == 0) break;
-					
 				}
 				size = Math.max(size, counter);
 				counter = 0;
