@@ -20,8 +20,7 @@ public class biggestSubMatrix extends ConsoleProgram{
 			for(int j = 0; j < matrix[0].length; j++){
 				int counter = 0;
 				for(int p = i; p < matrix.length; p++){
-					
-					int q = 0;
+					int q;
 					for(q = j; q < matrix[0].length; q++){
 						if(matrix[p][q] == 0) break;
 						else counter++;
