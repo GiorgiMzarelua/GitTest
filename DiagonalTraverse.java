@@ -22,26 +22,31 @@ public class DiagonalTraverse extends ConsoleProgram{
 		int col = 0;
 		int rows = mat.length;
 		int colls = mat[0].length;		
-		ArrayList<Integer> ans = new ArrayList<>();
+		int[] ans = new int[rows * colls];
+		int i = 0;
 		boolean up = true;
 		while(row < rows && col < colls){
 			if(up){
 				while(row > 0 && col < mat[0].length - 1){
-					ans.add(mat[row][col]);
+					ans[i] = mat[row][col];
 					row--;
 					col++;
+					i++;
 				}
-				ans.add(mat[row][col]);
+				ans[i] = mat[row][col];
+				i++;
 				if(col == mat[0].length - 1) row++;
 				else col ++;
 			}
 			else{
 				while(col > 0 && row < mat.length - 1){
-					ans.add(mat[row][col]);
+					ans[i] = mat[row][col];
 					row++;
 					col--;
+					i++;
 				}
-				ans.add(mat[row][col]);
+				ans[i] = mat[row][col];
+				i++;
 				if(col == 0) row++;
 				else col++;
 			}
