@@ -14,7 +14,7 @@ public class DiagonalTraverse extends ConsoleProgram{
     		}
     	}
     	int[] ans = findDiagonalOrder(mat);
-    	println(ans);
+    	println(Arrays.toString(ans));
     }
 
 	private int[] findDiagonalOrder(int[][] mat) {
