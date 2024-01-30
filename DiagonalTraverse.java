@@ -13,11 +13,11 @@ public class DiagonalTraverse extends ConsoleProgram{
     			mat[i][j] = readInt("Enter the " + (j + 1) + "-th element of " + (i + 1) + "-th array: ");
     		}
     	}
-    	ArrayList<Integer> ans = findDiagonalOrder(mat);
+    	int[] ans = findDiagonalOrder(mat);
     	println(ans);
     }
 
-	private ArrayList findDiagonalOrder(int[][] mat) {
+	private int[] findDiagonalOrder(int[][] mat) {
 		int row = 0;
 		int col = 0;
 		int rows = mat.length;
