@@ -29,7 +29,7 @@ public class spiralMatrix extends ConsoleProgram{
 			}
 			row++;
 			for(int i = row; i <= rows; i++){
-				spiral.add(matrix[i][col]);
+				spiral.add(matrix[i][colls]);
 			}
 			colls--;
 			if(rows >= row){
