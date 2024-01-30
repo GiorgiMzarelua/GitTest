@@ -40,7 +40,7 @@ public class spiralMatrix extends ConsoleProgram{
 			rows--;
 			if(colls >= col){
 				for(int i = rows; i >= row; i--){
-					spiral.add(matrix[i][colls]);
+					spiral.add(matrix[i][col]);
 				}
 			}
 			col++;
