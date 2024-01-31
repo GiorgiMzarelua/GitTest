@@ -10,7 +10,7 @@ public class Domino extends ConsoleProgram{
     }
 
 	private double simulateDomino(int n) {
-		int counter = 0;
+		double counter = 0;
 		for(int i = 0; i < n; i++){
 			counter += stimulateOne();
 		}
