@@ -27,6 +27,7 @@ public class Kitchen extends ConsoleProgram{
     	ingredients.add("flour");
     	ingredients.add("salt");
     	ingredients.add("cheese");
+    	ingredients.add("bread");
     	ArrayList<String> bread = new ArrayList<>();
     	bread.add("flour");
     	bread.add("salt");
