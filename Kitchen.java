@@ -58,7 +58,7 @@ public class Kitchen extends ConsoleProgram{
     	}
     	for(String ingredient : ingredients){
     		for(String food : recepies.keySet()){
-    			if(food.equals(ingredient) && !dishes.contains(food)) dishes.add("food");
+    			if(food.equals(ingredient) ) dishes.add("food");
     		}
     	}
     	return dishes;
