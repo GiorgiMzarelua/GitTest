@@ -7,12 +7,10 @@ import javax.swing.JWindow;
 import acm.program.ConsoleProgram;
 
 public class GraphicsTest extends ConsoleProgram{
-	private JButton open;
 	private JButton close;
 	private JWindow window;
     public void init(){
-    	open = new JButton("open");
-    	add(open, SOUTH);
+    	add(new JButton("open"), SOUTH);
     }
     
     public void ActionPerformed(ActionEvent e){
