@@ -10,8 +10,8 @@ public class GraphicsTest extends ConsoleProgram{
 	private JButton close;
 	private JWindow window;
     public void init(){
-    	addActionListeners();
     	add(new JButton("open"), SOUTH);
+    	addActionListeners();
     }
     
     public void ActionPerformed(ActionEvent e){
