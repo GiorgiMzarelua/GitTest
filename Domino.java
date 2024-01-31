@@ -14,7 +14,7 @@ public class Domino extends ConsoleProgram{
 			int num1 = rgen.nextInt(0, 6);
 			int num2 = rgen.nextInt(0, 6);
 			println(num1 + " " + num2);
-			return;
+			return 0;
 		}
 		return 0;
 	}
