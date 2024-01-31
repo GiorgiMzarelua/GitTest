@@ -18,7 +18,7 @@ public class GraphicsTest extends ConsoleProgram{
     
     public void ActionPerformed(ActionEvent e){
     	if(e.getActionCommand().equals("open")){
-    		println(12);
+    		println("beeeeeee");
     	}
     }
 }
