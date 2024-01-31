@@ -24,6 +24,8 @@ public class Kitchen extends ConsoleProgram{
     public void run(){
     	recepies = new HashMap<>();
     	ingredients = new ArrayList<>();
+    	ingredients.add("flour");
+    	ingredients.add("salt");
     	ingredients.add("cheese");
     	ingredients.add("bread");
     	ingredients.add("salatis fotoli");
