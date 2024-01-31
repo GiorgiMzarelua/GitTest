@@ -12,7 +12,6 @@ public class GraphicsTest extends ConsoleProgram{
 	private JWindow window;
     public void init(){
     	open = new JButton("open");
-    	open.addActionListener(this);
     	add(open, SOUTH);
     }
     
