@@ -28,7 +28,7 @@ public class Domino extends ConsoleProgram{
 				else i--;
 			}
 			int countPairs = 0;
-			for(int i = 0; i < 13; i+=2){
+			for(int i = 0; i < 7; i+=1){
 				if(nums[i] == true) countPairs++;
 				if(countPairs == 5) return tries;
 			}
