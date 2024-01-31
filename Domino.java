@@ -21,15 +21,16 @@ public class Domino extends ConsoleProgram{
 		int tries = 0;
 		while(true){
 			tries++;
-			boolean[] nums = new boolean[28];
-			for(int i = 0; i < 7; i++){
+			int[] nums = new int[28];
+			for(int i = 0; i < 14; i++){
 				int num = rgen.nextInt(0, 27);
-				if(nums[num] == false) nums[num] = true;
+				if(nums[num] == 0 && i % 2 == 0) nums[num] = 1;
+				else if(nums[num] == 0 && i % 2 == 1) nums[num] = -1;
 				else i--;
 			}
 			int countPairs = 0;
 			for(int i = 0; i < 7; i+=1){
-				if(nums[i] == true) countPairs++;
+				if(nums[i] == 1) countPairs++;
 				if(countPairs == 5) return tries;
 			}
 		}
