@@ -10,13 +10,13 @@ public class buttons extends ConsoleProgram{
 	private static final String HELLO_THERE = "Hello there";
 	private JTextField textField;
     public void init(){
-    	addActionListeners();
     	textField = new JTextField(20);
     	textField.setActionCommand(HELLO);
     	textField.addActionListener(this);
     	add(textField, NORTH);
     	JButton but = new JButton(HELLO);
     	add(but, SOUTH);
+    	addActionListeners();
     }
     @Override
     public void actionPerformed(ActionEvent e){
