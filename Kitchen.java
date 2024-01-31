@@ -56,6 +56,11 @@ public class Kitchen extends ConsoleProgram{
     		}
     		if(counter == recepies.get(food).size()) dishes.add(food);
     	}
+    	for(String ingredient : ingredients){
+    		for(String food : recepies.keySet()){
+    			if(food.equals(ingredient) && !dishes.contains(food)) dishes.add("food");
+    		}
+    	}
     	return dishes;
     }
 }
