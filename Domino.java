@@ -10,12 +10,28 @@ public class Domino extends ConsoleProgram{
     }
 
 	private double simulateDomino(int n) {
-		while(n > 0){
-			int num1 = rgen.nextInt(0, 6);
-			int num2 = rgen.nextInt(0, 6);
-			println(num1 + " " + num2);
-			return 0;
+		int counter = 0;
+		for(int i = 0; i < n; i++){
+			counter += stimulateOne();
 		}
-		return 0;
+		return counter / n;
+	}
+
+	private int stimulateOne() {
+		int tries = 0;
+		while(true){
+			tries++;
+			boolean[] nums = new boolean[28];
+			for(int i = 0; i < 7; i++){
+				int num = rgen.nextInt(0, 27);
+				if(nums[num] == false) nums[num] = true;
+				else i--;
+			}
+			int countPairs = 0;
+			for(int i = 0; i < 13; i+=2){
+				if(nums[i] == true) countPairs++;
+				if(countPairs == 5) return tries;
+			}
+		}
 	}
 }
