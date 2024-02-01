@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -7,8 +8,10 @@ public class Nim extends GraphicsProgram{
 	public static final int N_COINS = 11; 
 	public static final int COIN_SIZE = 25; 
 	public static final int COIN_SEP = 10;
+	private int LastBallLocation = 11 * 2 * COIN_SIZE + 10 * COIN_SEP;
     public void run(){
     	addBalls();
+    	addMouseListeners();
     }
 
 	private void addBalls() {
@@ -19,6 +22,13 @@ public class Nim extends GraphicsProgram{
 			ball.setFilled(true);
 			ball.setColor(Color.GRAY);
 			add(ball, x, y);
+		}
+	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e){
+		if(e.getLocationOnScreen() != null){
+			
 		}
 	}
 }
