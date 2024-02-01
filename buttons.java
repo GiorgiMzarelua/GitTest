@@ -22,7 +22,7 @@ public class buttons extends ConsoleProgram{
     public void actionPerformed(ActionEvent e){
     	String st = e.getActionCommand();
     	if(st.equals(HELLO)){
-    		println(HELLO_THERE);
+    		println(textField.getText());
     	}
     	
     }
