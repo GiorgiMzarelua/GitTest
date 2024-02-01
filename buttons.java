@@ -11,7 +11,7 @@ public class buttons extends ConsoleProgram{
 	private JTextField textField;
     public void init(){
     	textField = new JTextField(20);
-    	textField.addActionListener(this);
+    	textField.setActionCommand(HELLO);
     	add(textField, NORTH);
     	JButton but = new JButton(HELLO);
     	add(but, SOUTH);
