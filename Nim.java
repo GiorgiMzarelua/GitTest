@@ -13,9 +13,9 @@ public class Nim extends GraphicsProgram{
 
 	private void addBalls() {
 		for(int i = 0; i < N_COINS; i++){
-			GOval ball = new GOval (COIN_SIZE, COIN_SIZE);
-			double x = i * COIN_SIZE + i * COIN_SEP;
-			double y = getHeight() / 2 - COIN_SIZE / 2;
+			GOval ball = new GOval (2 * COIN_SIZE, 2 * COIN_SIZE);
+			double x = i * 2 * COIN_SIZE + i * COIN_SEP;
+			double y = getHeight() / 2 - COIN_SIZE ;
 			ball.setFilled(true);
 			ball.setColor(Color.GRAY);
 			add(ball, x, y);
