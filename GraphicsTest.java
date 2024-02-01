@@ -12,6 +12,7 @@ public class GraphicsTest extends ConsoleProgram{
     public void init(){
     	addActionListeners();
     	add(new JButton("open"), SOUTH);
+    	addActionListeners();
     }
     
     public void ActionPerformed(ActionEvent e){
